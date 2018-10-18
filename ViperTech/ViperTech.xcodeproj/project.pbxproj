@@ -19,6 +19,16 @@
 		FB84524421786FA3001BA9D7 /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB84523E21786FA3001BA9D7 /* MainInteractor.swift */; };
 		FB84524521786FA3001BA9D7 /* MainEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB84523F21786FA3001BA9D7 /* MainEntities.swift */; };
 		FB84524821787247001BA9D7 /* StoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB84524721787247001BA9D7 /* StoryboardExtension.swift */; };
+		FB84524A21788B7E001BA9D7 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB84524921788B7E001BA9D7 /* UIViewExtension.swift */; };
+		FB84525421788F4C001BA9D7 /* SelectorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB84524E21788F4C001BA9D7 /* SelectorPresenter.swift */; };
+		FB84525521788F4C001BA9D7 /* SelectorRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB84524F21788F4C001BA9D7 /* SelectorRouter.swift */; };
+		FB84525621788F4C001BA9D7 /* SelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB84525021788F4C001BA9D7 /* SelectorViewController.swift */; };
+		FB84525721788F4C001BA9D7 /* SelectorProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB84525121788F4C001BA9D7 /* SelectorProtocols.swift */; };
+		FB84525821788F4C001BA9D7 /* SelectorInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB84525221788F4C001BA9D7 /* SelectorInteractor.swift */; };
+		FB84525921788F4C001BA9D7 /* SelectorEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB84525321788F4C001BA9D7 /* SelectorEntities.swift */; };
+		FB84526121789EA3001BA9D7 /* NavigationBarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB84526021789EA3001BA9D7 /* NavigationBarExtension.swift */; };
+		FB84526321789FF8001BA9D7 /* SelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB84526221789FF8001BA9D7 /* SelectorViewController.xib */; };
+		FB8452652178A416001BA9D7 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8452642178A416001BA9D7 /* UIApplicationExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +46,16 @@
 		FB84523E21786FA3001BA9D7 /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
 		FB84523F21786FA3001BA9D7 /* MainEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainEntities.swift; sourceTree = "<group>"; };
 		FB84524721787247001BA9D7 /* StoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardExtension.swift; sourceTree = "<group>"; };
+		FB84524921788B7E001BA9D7 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		FB84524E21788F4C001BA9D7 /* SelectorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorPresenter.swift; sourceTree = "<group>"; };
+		FB84524F21788F4C001BA9D7 /* SelectorRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorRouter.swift; sourceTree = "<group>"; };
+		FB84525021788F4C001BA9D7 /* SelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorViewController.swift; sourceTree = "<group>"; };
+		FB84525121788F4C001BA9D7 /* SelectorProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorProtocols.swift; sourceTree = "<group>"; };
+		FB84525221788F4C001BA9D7 /* SelectorInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorInteractor.swift; sourceTree = "<group>"; };
+		FB84525321788F4C001BA9D7 /* SelectorEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorEntities.swift; sourceTree = "<group>"; };
+		FB84526021789EA3001BA9D7 /* NavigationBarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarExtension.swift; sourceTree = "<group>"; };
+		FB84526221789FF8001BA9D7 /* SelectorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectorViewController.xib; sourceTree = "<group>"; };
+		FB8452642178A416001BA9D7 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +102,8 @@
 		FB84523621786E35001BA9D7 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FB84524C21788F2F001BA9D7 /* Detail */,
+				FB84524B21788F21001BA9D7 /* Selector */,
 				FB84523721786E40001BA9D7 /* Main */,
 			);
 			path = Modules;
@@ -105,8 +127,40 @@
 			isa = PBXGroup;
 			children = (
 				FB84524721787247001BA9D7 /* StoryboardExtension.swift */,
+				FB84524921788B7E001BA9D7 /* UIViewExtension.swift */,
+				FB84526021789EA3001BA9D7 /* NavigationBarExtension.swift */,
+				FB8452642178A416001BA9D7 /* UIApplicationExtension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		FB84524B21788F21001BA9D7 /* Selector */ = {
+			isa = PBXGroup;
+			children = (
+				FB84524D21788F37001BA9D7 /* Table */,
+				FB84524E21788F4C001BA9D7 /* SelectorPresenter.swift */,
+				FB84524F21788F4C001BA9D7 /* SelectorRouter.swift */,
+				FB84525021788F4C001BA9D7 /* SelectorViewController.swift */,
+				FB84525121788F4C001BA9D7 /* SelectorProtocols.swift */,
+				FB84525221788F4C001BA9D7 /* SelectorInteractor.swift */,
+				FB84525321788F4C001BA9D7 /* SelectorEntities.swift */,
+				FB84526221789FF8001BA9D7 /* SelectorViewController.xib */,
+			);
+			path = Selector;
+			sourceTree = "<group>";
+		};
+		FB84524C21788F2F001BA9D7 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		FB84524D21788F37001BA9D7 /* Table */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Table;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +224,7 @@
 				FB84522F21786B38001BA9D7 /* LaunchScreen.storyboard in Resources */,
 				FB84522C21786B38001BA9D7 /* Assets.xcassets in Resources */,
 				FB84522721786B36001BA9D7 /* MainViewController.storyboard in Resources */,
+				FB84526321789FF8001BA9D7 /* SelectorViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,11 +235,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB84525421788F4C001BA9D7 /* SelectorPresenter.swift in Sources */,
+				FB84525521788F4C001BA9D7 /* SelectorRouter.swift in Sources */,
+				FB84524A21788B7E001BA9D7 /* UIViewExtension.swift in Sources */,
 				FB84524121786FA3001BA9D7 /* MainRouter.swift in Sources */,
 				FB84524321786FA3001BA9D7 /* MainProtocols.swift in Sources */,
 				FB84522221786B36001BA9D7 /* AppDelegate.swift in Sources */,
+				FB8452652178A416001BA9D7 /* UIApplicationExtension.swift in Sources */,
 				FB84524221786FA3001BA9D7 /* MainViewController.swift in Sources */,
+				FB84526121789EA3001BA9D7 /* NavigationBarExtension.swift in Sources */,
+				FB84525921788F4C001BA9D7 /* SelectorEntities.swift in Sources */,
 				FB84524821787247001BA9D7 /* StoryboardExtension.swift in Sources */,
+				FB84525721788F4C001BA9D7 /* SelectorProtocols.swift in Sources */,
+				FB84525821788F4C001BA9D7 /* SelectorInteractor.swift in Sources */,
+				FB84525621788F4C001BA9D7 /* SelectorViewController.swift in Sources */,
 				FB84522A21786B36001BA9D7 /* ViperTech.xcdatamodeld in Sources */,
 				FB84524021786FA3001BA9D7 /* MainPresenter.swift in Sources */,
 				FB84524521786FA3001BA9D7 /* MainEntities.swift in Sources */,

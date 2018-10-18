@@ -9,16 +9,13 @@
 import UIKit
 
 protocol SelectorPresenterToViewProtocol: class{
-    func showSomething(argument: SelectorModel)
 }
 
 protocol SelectorInteractorToPresenterProtocol: class{
-    func somethingFetched(argument: SelectorModel)
 }
 
 protocol SelectorPresenterToInteractorProtocol: class{
     var presenter: SelectorInteractorToPresenterProtocol? {get set}
-    func fetchSomething()
 }
 
 protocol SelectorViewToPresenterProtocol: class{

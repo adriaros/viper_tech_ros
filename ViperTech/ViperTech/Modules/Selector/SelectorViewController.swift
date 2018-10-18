@@ -15,7 +15,6 @@ class SelectorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.updateView()
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -24,7 +23,5 @@ class SelectorViewController: UIViewController {
 }
 
 extension SelectorViewController: SelectorPresenterToViewProtocol {
-    
-    func showSomething(argument: SelectorModel) {
-    }
+
 }

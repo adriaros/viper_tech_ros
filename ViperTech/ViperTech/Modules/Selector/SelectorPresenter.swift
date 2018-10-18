@@ -15,13 +15,9 @@ class SelectorPresenter: SelectorViewToPresenterProtocol {
     var router: SelectorPresenterToRouterProtocol?
     
     func updateView() {
-        interactor?.fetchSomething()
     }
 }
 
 extension SelectorPresenter: SelectorInteractorToPresenterProtocol {
-    
-    func somethingFetched(argument: SelectorModel) {
-        view?.showSomething(argument: argument)
-    }
+
 }

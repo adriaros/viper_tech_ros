@@ -15,6 +15,12 @@ class MainPresenter: MainViewToPresenterProtocol {
     var router: MainPresenterToRouterProtocol?
     
     func updateView() {
+        view?.startButton.roundCorners()
+    }
+    
+    func startButtonPressed() {
+        guard let vc = view as? UIViewController else { return }
+        router?.navigateToSelector(origin: vc)
     }
 }
 

@@ -15,7 +15,5 @@ import UIKit
 class SelectorInteractor: SelectorPresenterToInteractorProtocol{
     
     var presenter: SelectorInteractorToPresenterProtocol?
-    
-    func fetchSomething() {
-    }
+
 }

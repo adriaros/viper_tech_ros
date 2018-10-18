@@ -6,4 +6,13 @@
 //  Copyright © 2018 adriaros. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+extension UIView {
+    func roundCorners(){
+        let h = self.bounds.size.height
+        self.layer.cornerRadius = h / 4
+        self.layer.masksToBounds = true
+    }
+}
+

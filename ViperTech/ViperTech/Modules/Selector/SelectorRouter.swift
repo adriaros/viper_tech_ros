@@ -11,6 +11,7 @@ import UIKit
 class SelectorRouter: SelectorPresenterToRouterProtocol{
     
     class func createModule() -> UIViewController{
+        
         let view = SelectorViewController()
         let presenter: SelectorViewToPresenterProtocol & SelectorInteractorToPresenterProtocol = SelectorPresenter()
         let interactor: SelectorPresenterToInteractorProtocol = SelectorInteractor()

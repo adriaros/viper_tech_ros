@@ -11,6 +11,7 @@ import UIKit
 enum Storyboard : String {
     case EnvironmentSelector
     case MainViewController
+    case SelectorViewController
     
     func instantiateViewController<T>() -> T where T: StoryboardIdentifiable {
         let sb = UIStoryboard(storyboard: self)
