@@ -9,13 +9,21 @@
 import UIKit
 
 protocol SelectorDetailPresenterToViewProtocol: class{
+    var albumImage: UIImageView! { get set }
+    var artistNameLbl: UILabel! { get set }
+    var songNameLbl: UILabel! { get set }
+    var playPauseButton: UIButton! { get set }
 }
 
 protocol SelectorDetailInteractorToPresenterProtocol: class{
+    func nextSong(index: Int)
+    func previousSong(index: Int)
 }
 
 protocol SelectorDetailPresenterToInteractorProtocol: class{
     var presenter: SelectorDetailInteractorToPresenterProtocol? {get set}
+    func nextSong(index: Int)
+    func previousSong(index: Int)
 }
 
 protocol SelectorDetailViewToPresenterProtocol: class{
@@ -23,8 +31,12 @@ protocol SelectorDetailViewToPresenterProtocol: class{
     var interactor: SelectorDetailPresenterToInteractorProtocol? {get set}
     var router: SelectorDetailPresenterToRouterProtocol? {get set}
     func updateView()
+    var index: Int { get set }
+    func playPausePressed()
+    func nextSongPressed()
+    func previousSongPressed()
 }
 
 protocol SelectorDetailPresenterToRouterProtocol: class{
-    static func createModule(data: [SelectorResultsList]) -> UIViewController
+    static func createModule(index: Int) -> UIViewController
 }

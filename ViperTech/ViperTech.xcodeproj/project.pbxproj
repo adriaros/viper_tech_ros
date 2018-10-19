@@ -52,6 +52,7 @@
 		FB97B0552179F8610056CA70 /* SelectorServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97B0542179F8610056CA70 /* SelectorServices.swift */; };
 		FB97B057217A0B6F0056CA70 /* TimeTervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97B056217A0B6F0056CA70 /* TimeTervalExtension.swift */; };
 		FB97B059217A20890056CA70 /* SelectorSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97B058217A20890056CA70 /* SelectorSingleton.swift */; };
+		FB97B05B217A27DD0056CA70 /* SelectorDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB97B05A217A27DD0056CA70 /* SelectorDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +107,7 @@
 		FB97B0542179F8610056CA70 /* SelectorServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectorServices.swift; path = ViperTech/Network/Configuration/SelectorServices.swift; sourceTree = SOURCE_ROOT; };
 		FB97B056217A0B6F0056CA70 /* TimeTervalExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTervalExtension.swift; sourceTree = "<group>"; };
 		FB97B058217A20890056CA70 /* SelectorSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectorSingleton.swift; path = "../../../../../../../../Projects/MED_FB/Workspace/iOS-master-2e213604c618d5cc48f6ea69588ae376eaadb446/SelectorSingleton.swift"; sourceTree = "<group>"; };
+		FB97B05A217A27DD0056CA70 /* SelectorDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectorDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,6 +264,7 @@
 				FB97B0292179DD6A0056CA70 /* SelectorDetailProtocols.swift */,
 				FB97B02A2179DD6A0056CA70 /* SelectorDetailInteractor.swift */,
 				FB97B02B2179DD6A0056CA70 /* SelectorDetailEntities.swift */,
+				FB97B05A217A27DD0056CA70 /* SelectorDetailViewController.xib */,
 			);
 			path = SelectorDetail;
 			sourceTree = "<group>";
@@ -391,6 +394,7 @@
 			files = (
 				FB84522F21786B38001BA9D7 /* LaunchScreen.storyboard in Resources */,
 				FB97B01D2179DC220056CA70 /* Localizable.strings in Resources */,
+				FB97B05B217A27DD0056CA70 /* SelectorDetailViewController.xib in Resources */,
 				FB8452712179C9CE001BA9D7 /* SelectorTableViewCell.xib in Resources */,
 				FB84522C21786B38001BA9D7 /* Assets.xcassets in Resources */,
 				FB84522721786B36001BA9D7 /* MainViewController.storyboard in Resources */,

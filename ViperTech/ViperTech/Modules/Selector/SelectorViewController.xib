@@ -23,6 +23,9 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="JFH-3S-07a">
+                    <rect key="frame" x="0.0" y="-120" width="375" height="797"/>
+                </imageView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3qW-Rz-q2c">
                     <rect key="frame" x="20" y="121" width="335" height="526"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -75,19 +78,24 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="JFH-3S-07a" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="0aU-YI-m3L"/>
                 <constraint firstItem="3qW-Rz-q2c" firstAttribute="top" secondItem="eP2-uD-y0J" secondAttribute="bottom" constant="30" id="8LF-zp-YcZ"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="eP2-uD-y0J" secondAttribute="trailing" constant="20" id="GlP-xZ-SSh"/>
                 <constraint firstItem="eP2-uD-y0J" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="HfH-fs-DxK"/>
+                <constraint firstAttribute="trailing" secondItem="JFH-3S-07a" secondAttribute="trailing" id="U0z-Ob-sL6"/>
                 <constraint firstItem="eP2-uD-y0J" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="aab-uy-a5n"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="3qW-Rz-q2c" secondAttribute="trailing" constant="20" id="ahj-z8-hRE"/>
+                <constraint firstAttribute="bottom" secondItem="JFH-3S-07a" secondAttribute="bottom" constant="-10" id="cHj-oq-pNX"/>
                 <constraint firstItem="3qW-Rz-q2c" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="l5a-u8-9JU"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="3qW-Rz-q2c" secondAttribute="bottom" constant="20" id="rC0-fy-PDZ"/>
+                <constraint firstItem="JFH-3S-07a" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-120" id="rnK-V8-1I6"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="-919.20000000000005" y="98.50074962518741"/>
         </view>
     </objects>
     <resources>
+        <image name="Background" width="657" height="1161"/>
         <image name="Finder" width="50" height="50"/>
     </resources>
 </document>

@@ -35,4 +35,5 @@ protocol SelectorViewToPresenterProtocol: class{
 
 protocol SelectorPresenterToRouterProtocol: class{
     static func createModule() -> UIViewController
+    func navigateToDetail(origin: UIViewController, _ index: Int)
 }

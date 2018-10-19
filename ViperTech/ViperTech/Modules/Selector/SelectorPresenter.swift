@@ -67,8 +67,7 @@ extension SelectorPresenter: SelectorInteractorToPresenterProtocol {
 
 extension SelectorPresenter: SelectorTableActionDelegate {
     func selected(index: Int) {
-//        guard let vc = view as? UIViewController else { return }
-//        router?.navigateToDetail(origin: vc, data[index])
-        print("Index: ", index)
+        guard let vc = view as? UIViewController else { return }
+        router?.navigateToDetail(origin: vc, index)
     }
 }

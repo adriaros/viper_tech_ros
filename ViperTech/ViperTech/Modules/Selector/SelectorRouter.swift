@@ -25,4 +25,8 @@ class SelectorRouter: SelectorPresenterToRouterProtocol{
         
         return view
     }
+    
+    func navigateToDetail(origin: UIViewController, _ index: Int) {
+        origin.navigationController?.pushViewController(SelectorDetailRouter.createModule(index: index), animated: true)
+    }
 }
