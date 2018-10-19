@@ -9,7 +9,7 @@
 import UIKit
 
 class MainRouter: MainPresenterToRouterProtocol{
-    
+ 
     class func createModule() -> UIViewController{
         
         let view: MainViewController = Storyboard.MainViewController.instantiateViewController()
@@ -24,5 +24,12 @@ class MainRouter: MainPresenterToRouterProtocol{
         interactor.presenter = presenter
         
         return view
+    }
+    
+    func navigateToSelector(origin: UIViewController){
+        //origin.navigationController?.pushViewController(SelectorRouter.createModule(), animated: true)
+        
+        guard let navigationController = origin.navigationController as? NavigationBar else {return}
+        navigationController.setViewControllers([SelectorRouter.createModule()], animated: true)
     }
 }

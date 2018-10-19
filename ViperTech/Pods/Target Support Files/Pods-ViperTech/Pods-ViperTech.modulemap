@@ -1,0 +1,6 @@
+framework module Pods_ViperTech {
+  umbrella header "Pods-ViperTech-umbrella.h"
+
+  export *
+  module * { export * }
+}

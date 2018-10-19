@@ -9,9 +9,11 @@
 import UIKit
 
 protocol MainPresenterToViewProtocol: class{
+    var startButton: UIButton! { get set }
 }
 
 protocol MainInteractorToPresenterProtocol: class{
+    
 }
 
 protocol MainPresenterToInteractorProtocol: class{
@@ -23,8 +25,10 @@ protocol MainViewToPresenterProtocol: class{
     var interactor: MainPresenterToInteractorProtocol? {get set}
     var router: MainPresenterToRouterProtocol? {get set}
     func updateView()
+    func startButtonPressed()
 }
 
 protocol MainPresenterToRouterProtocol: class{
     static func createModule() -> UIViewController
+    func navigateToSelector(origin: UIViewController)
 }

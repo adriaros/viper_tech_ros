@@ -12,7 +12,7 @@
 
 import UIKit
 
-class MainInteractor: MainPresenterToInteractorProtocol{
+class MainInteractor: MainPresenterToInteractorProtocol {
     
     var presenter: MainInteractorToPresenterProtocol?
 
