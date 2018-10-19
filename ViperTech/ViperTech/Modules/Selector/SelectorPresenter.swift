@@ -20,8 +20,11 @@ class SelectorPresenter: SelectorViewToPresenterProtocol {
     
     private var tableDataSource: SelectorTableDataSource?
     
+    let vc = UIApplication.topViewController()
+    
     func updateView() {
         configTable()
+        getDefaultList()
     }
     
     private func configTable() {
@@ -33,16 +36,38 @@ class SelectorPresenter: SelectorViewToPresenterProtocol {
         tableDataSource = SelectorTableDataSource()
         view?.tableView.dataSource = tableDataSource
     }
+    
+    private func getDefaultList(){
+        vc?.showLoader()
+        interactor?.fetchList()
+    }
+    
+    func searchButtonPressed(){
+        vc?.showLoader()
+        guard let text = view?.searchTextField.text else { return }
+        if text != "" { interactor?.search(withInfo: text) }
+    }
 }
 
 extension SelectorPresenter: SelectorInteractorToPresenterProtocol {
-
+    
+    func fetchedListDataSuccess(_ model: [SelectorResultsList]) {
+        SelectorSingleton.sharedInstance.resultsArray = model
+        tableDataSource = SelectorTableDataSource(data: SelectorSingleton.sharedInstance.resultsArray)
+        view?.tableView.dataSource = tableDataSource
+        view?.tableView.reloadData()
+        vc?.hideLoader()
+    }
+    
+    func fetchedListDataFailed(_ error: Error) {
+        print("Error: ", error)
+        vc?.hideLoader()
+    }
 }
 
 extension SelectorPresenter: SelectorTableActionDelegate {
     func selected(index: Int) {
-//        guard let vc = view as? UIViewController else { return }
-//        router?.navigateToDetail(origin: vc, data[index])
-        print("Index: ", index)
+        guard let vc = view as? UIViewController else { return }
+        router?.navigateToDetail(origin: vc, index)
     }
 }

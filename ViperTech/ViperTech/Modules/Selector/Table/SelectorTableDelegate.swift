@@ -25,6 +25,7 @@ final class SelectorTableDelegate: NSObject, UITableViewDelegate {
         delegate?.selected(index: indexPath.row)
     }
     
+    
 }
 
 

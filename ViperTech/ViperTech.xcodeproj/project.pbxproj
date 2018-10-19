@@ -35,6 +35,24 @@
 		FB84526C2179C8F7001BA9D7 /* SelectorTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB84526B2179C8F7001BA9D7 /* SelectorTableDelegate.swift */; };
 		FB8452702179C9CE001BA9D7 /* SelectorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB84526E2179C9CE001BA9D7 /* SelectorTableViewCell.swift */; };
 		FB8452712179C9CE001BA9D7 /* SelectorTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB84526F2179C9CE001BA9D7 /* SelectorTableViewCell.xib */; };
+		FB97B01D2179DC220056CA70 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FB97B01F2179DC220056CA70 /* Localizable.strings */; };
+		FB97B0232179DC490056CA70 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97B0222179DC490056CA70 /* StringExtension.swift */; };
+		FB97B02C2179DD6A0056CA70 /* SelectorDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97B0262179DD6A0056CA70 /* SelectorDetailPresenter.swift */; };
+		FB97B02D2179DD6A0056CA70 /* SelectorDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97B0272179DD6A0056CA70 /* SelectorDetailRouter.swift */; };
+		FB97B02E2179DD6A0056CA70 /* SelectorDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97B0282179DD6A0056CA70 /* SelectorDetailViewController.swift */; };
+		FB97B02F2179DD6A0056CA70 /* SelectorDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97B0292179DD6A0056CA70 /* SelectorDetailProtocols.swift */; };
+		FB97B0302179DD6A0056CA70 /* SelectorDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97B02A2179DD6A0056CA70 /* SelectorDetailInteractor.swift */; };
+		FB97B0312179DD6A0056CA70 /* SelectorDetailEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97B02B2179DD6A0056CA70 /* SelectorDetailEntities.swift */; };
+		FB97B0422179E41C0056CA70 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97B0412179E41C0056CA70 /* UIViewControllerExtension.swift */; };
+		FB97B0472179E8F40056CA70 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97B0462179E8F40056CA70 /* Constants.swift */; };
+		FB97B04A2179EA410056CA70 /* SelectorListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97B0492179EA410056CA70 /* SelectorListResponse.swift */; };
+		FB97B04C2179EF120056CA70 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97B04B2179EF120056CA70 /* APIRouter.swift */; };
+		FB97B04E2179EF210056CA70 /* APIConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97B04D2179EF210056CA70 /* APIConfigurator.swift */; };
+		FB97B0502179EF2C0056CA70 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97B04F2179EF2C0056CA70 /* APIClient.swift */; };
+		FB97B0552179F8610056CA70 /* SelectorServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97B0542179F8610056CA70 /* SelectorServices.swift */; };
+		FB97B057217A0B6F0056CA70 /* TimeTervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97B056217A0B6F0056CA70 /* TimeTervalExtension.swift */; };
+		FB97B059217A20890056CA70 /* SelectorSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97B058217A20890056CA70 /* SelectorSingleton.swift */; };
+		FB97B05B217A27DD0056CA70 /* SelectorDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB97B05A217A27DD0056CA70 /* SelectorDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +88,26 @@
 		FB84526B2179C8F7001BA9D7 /* SelectorTableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorTableDelegate.swift; sourceTree = "<group>"; };
 		FB84526E2179C9CE001BA9D7 /* SelectorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorTableViewCell.swift; sourceTree = "<group>"; };
 		FB84526F2179C9CE001BA9D7 /* SelectorTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectorTableViewCell.xib; sourceTree = "<group>"; };
+		FB97B01E2179DC220056CA70 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FB97B0202179DC230056CA70 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FB97B0212179DC240056CA70 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FB97B0222179DC490056CA70 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		FB97B0262179DD6A0056CA70 /* SelectorDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorDetailPresenter.swift; sourceTree = "<group>"; };
+		FB97B0272179DD6A0056CA70 /* SelectorDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorDetailRouter.swift; sourceTree = "<group>"; };
+		FB97B0282179DD6A0056CA70 /* SelectorDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorDetailViewController.swift; sourceTree = "<group>"; };
+		FB97B0292179DD6A0056CA70 /* SelectorDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorDetailProtocols.swift; sourceTree = "<group>"; };
+		FB97B02A2179DD6A0056CA70 /* SelectorDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorDetailInteractor.swift; sourceTree = "<group>"; };
+		FB97B02B2179DD6A0056CA70 /* SelectorDetailEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorDetailEntities.swift; sourceTree = "<group>"; };
+		FB97B0412179E41C0056CA70 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		FB97B0462179E8F40056CA70 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FB97B0492179EA410056CA70 /* SelectorListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorListResponse.swift; sourceTree = "<group>"; };
+		FB97B04B2179EF120056CA70 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		FB97B04D2179EF210056CA70 /* APIConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfigurator.swift; sourceTree = "<group>"; };
+		FB97B04F2179EF2C0056CA70 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		FB97B0542179F8610056CA70 /* SelectorServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectorServices.swift; path = ViperTech/Network/Configuration/SelectorServices.swift; sourceTree = SOURCE_ROOT; };
+		FB97B056217A0B6F0056CA70 /* TimeTervalExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTervalExtension.swift; sourceTree = "<group>"; };
+		FB97B058217A20890056CA70 /* SelectorSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectorSingleton.swift; path = "../../../../../../../../Projects/MED_FB/Workspace/iOS-master-2e213604c618d5cc48f6ea69588ae376eaadb446/SelectorSingleton.swift"; sourceTree = "<group>"; };
+		FB97B05A217A27DD0056CA70 /* SelectorDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectorDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,9 +160,10 @@
 		FB84522021786B36001BA9D7 /* ViperTech */ = {
 			isa = PBXGroup;
 			children = (
-				FB8452722179D261001BA9D7 /* NetworkLayer */,
-				FB8452662179C672001BA9D7 /* Configuration */,
+				FB97B03B2179E31D0056CA70 /* Base */,
+				FB97B0322179E20C0056CA70 /* Network */,
 				FB84524621787236001BA9D7 /* Extension */,
+				FB8452662179C672001BA9D7 /* Configuration */,
 				FB84523621786E35001BA9D7 /* Modules */,
 				FB84522121786B36001BA9D7 /* AppDelegate.swift */,
 				FB84522B21786B38001BA9D7 /* Assets.xcassets */,
@@ -138,7 +177,7 @@
 		FB84523621786E35001BA9D7 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				FB84524C21788F2F001BA9D7 /* Detail */,
+				FB97B0252179DD4D0056CA70 /* SelectorDetail */,
 				FB84524B21788F21001BA9D7 /* Selector */,
 				FB84523721786E40001BA9D7 /* Main */,
 			);
@@ -166,6 +205,9 @@
 				FB84524921788B7E001BA9D7 /* UIViewExtension.swift */,
 				FB84526021789EA3001BA9D7 /* NavigationBarExtension.swift */,
 				FB8452642178A416001BA9D7 /* UIApplicationExtension.swift */,
+				FB97B0222179DC490056CA70 /* StringExtension.swift */,
+				FB97B0412179E41C0056CA70 /* UIViewControllerExtension.swift */,
+				FB97B056217A0B6F0056CA70 /* TimeTervalExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -185,13 +227,6 @@
 			path = Selector;
 			sourceTree = "<group>";
 		};
-		FB84524C21788F2F001BA9D7 /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Detail;
-			sourceTree = "<group>";
-		};
 		FB84524D21788F37001BA9D7 /* Table */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				FB8452672179C6A2001BA9D7 /* ConfigParams.swift */,
+				FB97B01F2179DC220056CA70 /* Localizable.strings */,
 			);
 			path = Configuration;
 			sourceTree = "<group>";
@@ -219,11 +255,79 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		FB8452722179D261001BA9D7 /* NetworkLayer */ = {
+		FB97B0252179DD4D0056CA70 /* SelectorDetail */ = {
 			isa = PBXGroup;
 			children = (
+				FB97B0262179DD6A0056CA70 /* SelectorDetailPresenter.swift */,
+				FB97B0272179DD6A0056CA70 /* SelectorDetailRouter.swift */,
+				FB97B0282179DD6A0056CA70 /* SelectorDetailViewController.swift */,
+				FB97B0292179DD6A0056CA70 /* SelectorDetailProtocols.swift */,
+				FB97B02A2179DD6A0056CA70 /* SelectorDetailInteractor.swift */,
+				FB97B02B2179DD6A0056CA70 /* SelectorDetailEntities.swift */,
+				FB97B05A217A27DD0056CA70 /* SelectorDetailViewController.xib */,
 			);
-			path = NetworkLayer;
+			path = SelectorDetail;
+			sourceTree = "<group>";
+		};
+		FB97B0322179E20C0056CA70 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FB97B0332179E2420056CA70 /* Configuration */,
+				FB97B0522179F8490056CA70 /* Services */,
+				FB97B0482179EA0C0056CA70 /* ResponseEntity */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FB97B0332179E2420056CA70 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				FB97B04B2179EF120056CA70 /* APIRouter.swift */,
+				FB97B04D2179EF210056CA70 /* APIConfigurator.swift */,
+				FB97B04F2179EF2C0056CA70 /* APIClient.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		FB97B03B2179E31D0056CA70 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FB97B0452179E8E60056CA70 /* Constants */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		FB97B0452179E8E60056CA70 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				FB97B0462179E8F40056CA70 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		FB97B0482179EA0C0056CA70 /* ResponseEntity */ = {
+			isa = PBXGroup;
+			children = (
+				FB97B0492179EA410056CA70 /* SelectorListResponse.swift */,
+			);
+			path = ResponseEntity;
+			sourceTree = "<group>";
+		};
+		FB97B0522179F8490056CA70 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FB97B0532179F8530056CA70 /* Selector */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FB97B0532179F8530056CA70 /* Selector */ = {
+			isa = PBXGroup;
+			children = (
+				FB97B0542179F8610056CA70 /* SelectorServices.swift */,
+				FB97B058217A20890056CA70 /* SelectorSingleton.swift */,
+			);
+			path = Selector;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +374,8 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
+				ca,
 			);
 			mainGroup = FB84521521786B36001BA9D7;
 			productRefGroup = FB84521F21786B36001BA9D7 /* Products */;
@@ -287,6 +393,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB84522F21786B38001BA9D7 /* LaunchScreen.storyboard in Resources */,
+				FB97B01D2179DC220056CA70 /* Localizable.strings in Resources */,
+				FB97B05B217A27DD0056CA70 /* SelectorDetailViewController.xib in Resources */,
 				FB8452712179C9CE001BA9D7 /* SelectorTableViewCell.xib in Resources */,
 				FB84522C21786B38001BA9D7 /* Assets.xcassets in Resources */,
 				FB84522721786B36001BA9D7 /* MainViewController.storyboard in Resources */,
@@ -306,12 +414,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ViperTech/Pods-ViperTech-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,24 +461,40 @@
 				FB84525421788F4C001BA9D7 /* SelectorPresenter.swift in Sources */,
 				FB84525521788F4C001BA9D7 /* SelectorRouter.swift in Sources */,
 				FB84524A21788B7E001BA9D7 /* UIViewExtension.swift in Sources */,
+				FB97B02D2179DD6A0056CA70 /* SelectorDetailRouter.swift in Sources */,
 				FB84524121786FA3001BA9D7 /* MainRouter.swift in Sources */,
+				FB97B0312179DD6A0056CA70 /* SelectorDetailEntities.swift in Sources */,
+				FB97B02C2179DD6A0056CA70 /* SelectorDetailPresenter.swift in Sources */,
+				FB97B04C2179EF120056CA70 /* APIRouter.swift in Sources */,
+				FB97B057217A0B6F0056CA70 /* TimeTervalExtension.swift in Sources */,
+				FB97B0502179EF2C0056CA70 /* APIClient.swift in Sources */,
 				FB84524321786FA3001BA9D7 /* MainProtocols.swift in Sources */,
+				FB97B0552179F8610056CA70 /* SelectorServices.swift in Sources */,
 				FB84522221786B36001BA9D7 /* AppDelegate.swift in Sources */,
 				FB84526C2179C8F7001BA9D7 /* SelectorTableDelegate.swift in Sources */,
+				FB97B0422179E41C0056CA70 /* UIViewControllerExtension.swift in Sources */,
 				FB8452652178A416001BA9D7 /* UIApplicationExtension.swift in Sources */,
 				FB84524221786FA3001BA9D7 /* MainViewController.swift in Sources */,
 				FB8452682179C6A2001BA9D7 /* ConfigParams.swift in Sources */,
+				FB97B04E2179EF210056CA70 /* APIConfigurator.swift in Sources */,
 				FB84526121789EA3001BA9D7 /* NavigationBarExtension.swift in Sources */,
+				FB97B059217A20890056CA70 /* SelectorSingleton.swift in Sources */,
 				FB84525921788F4C001BA9D7 /* SelectorEntities.swift in Sources */,
 				FB84524821787247001BA9D7 /* StoryboardExtension.swift in Sources */,
 				FB84526A2179C8E8001BA9D7 /* SelectorTableDataSource.swift in Sources */,
+				FB97B0302179DD6A0056CA70 /* SelectorDetailInteractor.swift in Sources */,
+				FB97B02E2179DD6A0056CA70 /* SelectorDetailViewController.swift in Sources */,
 				FB84525721788F4C001BA9D7 /* SelectorProtocols.swift in Sources */,
 				FB84525821788F4C001BA9D7 /* SelectorInteractor.swift in Sources */,
 				FB84525621788F4C001BA9D7 /* SelectorViewController.swift in Sources */,
+				FB97B04A2179EA410056CA70 /* SelectorListResponse.swift in Sources */,
 				FB84522A21786B36001BA9D7 /* ViperTech.xcdatamodeld in Sources */,
 				FB8452702179C9CE001BA9D7 /* SelectorTableViewCell.swift in Sources */,
 				FB84524021786FA3001BA9D7 /* MainPresenter.swift in Sources */,
 				FB84524521786FA3001BA9D7 /* MainEntities.swift in Sources */,
+				FB97B02F2179DD6A0056CA70 /* SelectorDetailProtocols.swift in Sources */,
+				FB97B0232179DC490056CA70 /* StringExtension.swift in Sources */,
+				FB97B0472179E8F40056CA70 /* Constants.swift in Sources */,
 				FB84524421786FA3001BA9D7 /* MainInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,6 +518,16 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		FB97B01F2179DC220056CA70 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB97B01E2179DC220056CA70 /* en */,
+				FB97B0202179DC230056CA70 /* es */,
+				FB97B0212179DC240056CA70 /* ca */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -399,6 +535,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -460,6 +597,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
