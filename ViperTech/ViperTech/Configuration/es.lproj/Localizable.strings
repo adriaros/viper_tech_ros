@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  ViperTech
+
+  Created by Adria Ros Saez on 10/19/18.
+  Copyright © 2018 adriaros. All rights reserved.
+*/
+
+//Navigation Bar
+"navBar_selector_title" = "Buscador de canciones";
+
+//Main
+"mainbutton_title" = "Empezar";

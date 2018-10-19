@@ -57,7 +57,7 @@ class NavigationBar: UINavigationController {
         case is MainViewController:
             configure()
         case is SelectorViewController:
-            configure(middle: .title(text: "Song Finder"))
+            configure(middle: .title(text: "navBar_selector_title".localized()))
         default:
             break
         }
