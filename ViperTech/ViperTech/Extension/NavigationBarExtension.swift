@@ -56,6 +56,8 @@ class NavigationBar: UINavigationController {
         switch target {
         case is MainViewController:
             configure()
+        case is SelectorViewController:
+            configure(middle: .title(text: "Song Finder"))
         default:
             break
         }

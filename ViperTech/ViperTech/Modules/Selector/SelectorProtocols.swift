@@ -9,6 +9,8 @@
 import UIKit
 
 protocol SelectorPresenterToViewProtocol: class{
+    var searchBar: UISearchBar! { get set }
+    var tableView: UITableView!  { get set }
 }
 
 protocol SelectorInteractorToPresenterProtocol: class{

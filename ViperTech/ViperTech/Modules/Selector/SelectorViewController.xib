@@ -12,6 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectorViewController" customModule="ViperTech" customModuleProvider="target">
             <connections>
+                <outlet property="searchBar" destination="P5w-G0-Y4C" id="nVA-XX-00w"/>
+                <outlet property="tableView" destination="3qW-Rz-q2c" id="rbH-eH-pDo"/>
                 <outlet property="view" destination="iN0-l3-epB" id="2c7-qe-7IH"/>
             </connections>
         </placeholder>
@@ -19,9 +21,31 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="P5w-G0-Y4C">
+                    <rect key="frame" x="20" y="35" width="335" height="56"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="56" id="QvZ-Kk-bYP"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3qW-Rz-q2c">
+                    <rect key="frame" x="20" y="121" width="335" height="526"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="P5w-G0-Y4C" secondAttribute="trailing" constant="20" id="26x-5d-Mko"/>
+                <constraint firstItem="P5w-G0-Y4C" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="8UM-Pl-NGU"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="3qW-Rz-q2c" secondAttribute="trailing" constant="20" id="ahj-z8-hRE"/>
+                <constraint firstItem="P5w-G0-Y4C" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="cqN-aY-12y"/>
+                <constraint firstItem="3qW-Rz-q2c" firstAttribute="top" secondItem="P5w-G0-Y4C" secondAttribute="bottom" constant="30" id="kTo-zj-qks"/>
+                <constraint firstItem="3qW-Rz-q2c" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="l5a-u8-9JU"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="3qW-Rz-q2c" secondAttribute="bottom" constant="20" id="rC0-fy-PDZ"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="-918" y="99"/>
+            <point key="canvasLocation" x="-919.20000000000005" y="98.50074962518741"/>
         </view>
     </objects>
 </document>
