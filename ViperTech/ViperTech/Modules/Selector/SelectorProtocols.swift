@@ -9,15 +9,19 @@
 import UIKit
 
 protocol SelectorPresenterToViewProtocol: class{
-    var searchBar: UISearchBar! { get set }
     var tableView: UITableView!  { get set }
+    var searchTextField: UITextField! { get set }
+    var searchButtonView: UIView! { get set }
 }
 
 protocol SelectorInteractorToPresenterProtocol: class{
+    func fetchedListDataSuccess(_ model: [SelectorResultsList])
+    func fetchedListDataFailed(_ error: Error)
 }
 
 protocol SelectorPresenterToInteractorProtocol: class{
     var presenter: SelectorInteractorToPresenterProtocol? {get set}
+    func fetchList()
 }
 
 protocol SelectorViewToPresenterProtocol: class{
@@ -25,6 +29,7 @@ protocol SelectorViewToPresenterProtocol: class{
     var interactor: SelectorPresenterToInteractorProtocol? {get set}
     var router: SelectorPresenterToRouterProtocol? {get set}
     func updateView()
+    func searchButtonPressed()
 }
 
 protocol SelectorPresenterToRouterProtocol: class{

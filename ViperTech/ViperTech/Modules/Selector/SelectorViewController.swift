@@ -12,8 +12,9 @@ class SelectorViewController: UIViewController {
     
     var presenter: SelectorViewToPresenterProtocol?
     
-    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var searchButtonView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,11 @@ class SelectorViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    @IBAction func onSearchButton(_ sender: Any) {
+        presenter?.searchButtonPressed()
+    }
+    
 }
 
 extension SelectorViewController: SelectorPresenterToViewProtocol {

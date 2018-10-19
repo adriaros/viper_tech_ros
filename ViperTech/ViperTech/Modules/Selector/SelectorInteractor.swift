@@ -15,5 +15,19 @@ import UIKit
 class SelectorInteractor: SelectorPresenterToInteractorProtocol{
     
     var presenter: SelectorInteractorToPresenterProtocol?
-
+    
+    func fetchList() {
+        
+        APIClient.getDefaultList() { (DTO, error) in
+            
+            if error != nil {
+                guard let error = error else { return }
+                self.presenter?.fetchedListDataFailed(error)
+            } else {
+                guard let results = DTO?.results else { return }
+                self.presenter?.fetchedListDataSuccess(results)
+            }
+            
+        }
+    }
 }

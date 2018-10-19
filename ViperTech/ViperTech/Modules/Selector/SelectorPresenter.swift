@@ -22,6 +22,7 @@ class SelectorPresenter: SelectorViewToPresenterProtocol {
     
     func updateView() {
         configTable()
+        getDefaultList()
     }
     
     private func configTable() {
@@ -33,10 +34,26 @@ class SelectorPresenter: SelectorViewToPresenterProtocol {
         tableDataSource = SelectorTableDataSource()
         view?.tableView.dataSource = tableDataSource
     }
+    
+    
+    private func getDefaultList(){
+        interactor?.fetchList()
+    }
+    
+    func searchButtonPressed(){
+        
+    }
 }
 
 extension SelectorPresenter: SelectorInteractorToPresenterProtocol {
-
+    
+    func fetchedListDataSuccess(_ model: [SelectorResultsList]) {
+        print("Model: ", model)
+    }
+    
+    func fetchedListDataFailed(_ error: Error) {
+        print("Error: ", error)
+    }
 }
 
 extension SelectorPresenter: SelectorTableActionDelegate {

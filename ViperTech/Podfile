@@ -7,5 +7,5 @@ target 'ViperTech' do
 
   # Pods for ViperTech
   pod 'RxSwift'
-
+  pod 'Alamofire', '~> 4.7.0'
 end
