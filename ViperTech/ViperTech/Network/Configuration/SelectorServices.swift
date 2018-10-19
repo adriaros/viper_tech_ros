@@ -11,20 +11,24 @@ import UIKit
 extension APIClient {
     
     static func getDefaultList(completion: @escaping (SelectorListResponse?,Error?)->Void){
-        
         performRequest(serviceRouter: APIRouter.getDefaultList(), decoder: JSONDecoder(), dto: SelectorListResponse.self) { (response) in
-            
-            let vc = UIApplication.topViewController()
-            vc?.showLoader()
-            
             switch response {
                 
             case .failure(let error):
                 completion(nil,error)
-                vc?.hideLoader()
             case .success(let data):
                 completion(data, nil)
-                vc?.hideLoader()
+            }
+        }
+    }
+    
+    static func getSearchList(completion: @escaping (SelectorListResponse?,Error?)->Void){
+        performRequest(serviceRouter: APIRouter.getSearchList(), decoder: JSONDecoder(), dto: SelectorListResponse.self) { (response) in
+            switch response {
+            case .failure(let error):
+                completion(nil,error)
+            case .success(let data):
+                completion(data, nil)
             }
         }
     }

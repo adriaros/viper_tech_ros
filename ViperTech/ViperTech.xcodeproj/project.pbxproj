@@ -50,6 +50,8 @@
 		FB97B04E2179EF210056CA70 /* APIConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97B04D2179EF210056CA70 /* APIConfigurator.swift */; };
 		FB97B0502179EF2C0056CA70 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97B04F2179EF2C0056CA70 /* APIClient.swift */; };
 		FB97B0552179F8610056CA70 /* SelectorServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97B0542179F8610056CA70 /* SelectorServices.swift */; };
+		FB97B057217A0B6F0056CA70 /* TimeTervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97B056217A0B6F0056CA70 /* TimeTervalExtension.swift */; };
+		FB97B059217A20890056CA70 /* SelectorSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97B058217A20890056CA70 /* SelectorSingleton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +104,8 @@
 		FB97B04D2179EF210056CA70 /* APIConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfigurator.swift; sourceTree = "<group>"; };
 		FB97B04F2179EF2C0056CA70 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		FB97B0542179F8610056CA70 /* SelectorServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectorServices.swift; path = ViperTech/Network/Configuration/SelectorServices.swift; sourceTree = SOURCE_ROOT; };
+		FB97B056217A0B6F0056CA70 /* TimeTervalExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTervalExtension.swift; sourceTree = "<group>"; };
+		FB97B058217A20890056CA70 /* SelectorSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectorSingleton.swift; path = "../../../../../../../../Projects/MED_FB/Workspace/iOS-master-2e213604c618d5cc48f6ea69588ae376eaadb446/SelectorSingleton.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +205,7 @@
 				FB8452642178A416001BA9D7 /* UIApplicationExtension.swift */,
 				FB97B0222179DC490056CA70 /* StringExtension.swift */,
 				FB97B0412179E41C0056CA70 /* UIViewControllerExtension.swift */,
+				FB97B056217A0B6F0056CA70 /* TimeTervalExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -317,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				FB97B0542179F8610056CA70 /* SelectorServices.swift */,
+				FB97B058217A20890056CA70 /* SelectorSingleton.swift */,
 			);
 			path = Selector;
 			sourceTree = "<group>";
@@ -456,6 +462,7 @@
 				FB97B0312179DD6A0056CA70 /* SelectorDetailEntities.swift in Sources */,
 				FB97B02C2179DD6A0056CA70 /* SelectorDetailPresenter.swift in Sources */,
 				FB97B04C2179EF120056CA70 /* APIRouter.swift in Sources */,
+				FB97B057217A0B6F0056CA70 /* TimeTervalExtension.swift in Sources */,
 				FB97B0502179EF2C0056CA70 /* APIClient.swift in Sources */,
 				FB84524321786FA3001BA9D7 /* MainProtocols.swift in Sources */,
 				FB97B0552179F8610056CA70 /* SelectorServices.swift in Sources */,
@@ -467,6 +474,7 @@
 				FB8452682179C6A2001BA9D7 /* ConfigParams.swift in Sources */,
 				FB97B04E2179EF210056CA70 /* APIConfigurator.swift in Sources */,
 				FB84526121789EA3001BA9D7 /* NavigationBarExtension.swift in Sources */,
+				FB97B059217A20890056CA70 /* SelectorSingleton.swift in Sources */,
 				FB84525921788F4C001BA9D7 /* SelectorEntities.swift in Sources */,
 				FB84524821787247001BA9D7 /* StoryboardExtension.swift in Sources */,
 				FB84526A2179C8E8001BA9D7 /* SelectorTableDataSource.swift in Sources */,

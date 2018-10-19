@@ -22,6 +22,7 @@ protocol SelectorInteractorToPresenterProtocol: class{
 protocol SelectorPresenterToInteractorProtocol: class{
     var presenter: SelectorInteractorToPresenterProtocol? {get set}
     func fetchList()
+    func search(withInfo: String)
 }
 
 protocol SelectorViewToPresenterProtocol: class{

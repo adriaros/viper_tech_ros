@@ -20,7 +20,7 @@ class SelectorPresenter: SelectorViewToPresenterProtocol {
     
     private var tableDataSource: SelectorTableDataSource?
     
-    private var data: [SelectorResultsList] = []
+    let vc = UIApplication.topViewController()
     
     func updateView() {
         configTable()
@@ -38,26 +38,30 @@ class SelectorPresenter: SelectorViewToPresenterProtocol {
     }
     
     private func getDefaultList(){
+        vc?.showLoader()
         interactor?.fetchList()
     }
     
     func searchButtonPressed(){
-        
+        vc?.showLoader()
+        guard let text = view?.searchTextField.text else { return }
+        if text != "" { interactor?.search(withInfo: text) }
     }
 }
 
 extension SelectorPresenter: SelectorInteractorToPresenterProtocol {
     
     func fetchedListDataSuccess(_ model: [SelectorResultsList]) {
-        print("Model: ", model)
-        data = model
-        tableDataSource = SelectorTableDataSource(data: data)
+        SelectorSingleton.sharedInstance.resultsArray = model
+        tableDataSource = SelectorTableDataSource(data: SelectorSingleton.sharedInstance.resultsArray)
         view?.tableView.dataSource = tableDataSource
         view?.tableView.reloadData()
+        vc?.hideLoader()
     }
     
     func fetchedListDataFailed(_ error: Error) {
         print("Error: ", error)
+        vc?.hideLoader()
     }
 }
 

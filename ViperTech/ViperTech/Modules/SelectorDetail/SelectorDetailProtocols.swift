@@ -26,5 +26,5 @@ protocol SelectorDetailViewToPresenterProtocol: class{
 }
 
 protocol SelectorDetailPresenterToRouterProtocol: class{
-    static func createModule() -> UIViewController
+    static func createModule(data: [SelectorResultsList]) -> UIViewController
 }

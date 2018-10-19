@@ -10,7 +10,7 @@ import UIKit
 
 class SelectorDetailRouter: SelectorDetailPresenterToRouterProtocol{
     
-    class func createModule() -> UIViewController{
+    class func createModule(data: [SelectorResultsList]) -> UIViewController{
         let view = SelectorDetailViewController()
         let presenter: SelectorDetailViewToPresenterProtocol & SelectorDetailInteractorToPresenterProtocol = SelectorDetailPresenter()
         let interactor: SelectorDetailPresenterToInteractorProtocol = SelectorDetailInteractor()

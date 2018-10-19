@@ -12,11 +12,14 @@ import Alamofire
 enum APIRouter : APIConfiguration {
     
     case getDefaultList()
+    case getSearchList()
     
     //HTTPMethod
     var method: HTTPMethod {
         switch self {
         case .getDefaultList:
+            return .get
+        case .getSearchList():
             return .get
         }
     }
@@ -26,6 +29,8 @@ enum APIRouter : APIConfiguration {
         switch self {
         case .getDefaultList:
             return Constants.Networking.Url.base_url + Constants.Networking.Url.default_search
+        case .getSearchList():
+            return Constants.Networking.Url.base_url + Constants.Networking.Url.item_search
         }
     }
     
@@ -33,6 +38,8 @@ enum APIRouter : APIConfiguration {
     var parameters: Parameters? {
         switch self {
         case .getDefaultList():
+            return nil
+        case .getSearchList():
             return nil
         }
     }
@@ -44,6 +51,9 @@ enum APIRouter : APIConfiguration {
         
         switch self {
         case .getDefaultList:
+            let url = try path.asURL()
+            urlRequest = URLRequest(url: url)
+        case .getSearchList:
             let url = try path.asURL()
             urlRequest = URLRequest(url: url)
         }

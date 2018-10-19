@@ -9,12 +9,12 @@
 import Foundation
 
 struct SelectorListResponse: Codable {
-    var resultCode: Int?
+    var resultCount: Int?
     let results: [SelectorResultsList]?
 }
 
 struct SelectorResultsList: Codable {
-    let wrapperType, kind, artistName, collectionName, trackName: String?
+    let wrapperType, kind, artistName, collectionName, trackName, primaryGenreName: String?
     let trackPrice: Float?
     let releaseDate: String?
     let currency: String?

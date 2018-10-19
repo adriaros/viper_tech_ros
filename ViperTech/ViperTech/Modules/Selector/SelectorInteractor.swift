@@ -30,4 +30,32 @@ class SelectorInteractor: SelectorPresenterToInteractorProtocol{
             
         }
     }
+    
+    func search(withInfo: String) {
+        let item = translateSearch(item: withInfo)
+        Constants.Networking.Url.item_search = item
+        getSpecificList()
+    }
+    
+    private func translateSearch(item: String) -> String {
+        if item.contains(" "){
+            return item.replacingOccurrences(of: " ", with: "+")
+        } else {
+            return item
+        }
+    }
+    
+    private func getSpecificList(){
+        APIClient.getSearchList() { (DTO, error) in
+            
+            if error != nil {
+                guard let error = error else { return }
+                self.presenter?.fetchedListDataFailed(error)
+            } else {
+                guard let results = DTO?.results else { return }
+                self.presenter?.fetchedListDataSuccess(results)
+            }
+            
+        }
+    }
 }
