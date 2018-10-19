@@ -20,6 +20,8 @@ class SelectorPresenter: SelectorViewToPresenterProtocol {
     
     private var tableDataSource: SelectorTableDataSource?
     
+    private var data: [SelectorResultsList] = []
+    
     func updateView() {
         configTable()
         getDefaultList()
@@ -35,7 +37,6 @@ class SelectorPresenter: SelectorViewToPresenterProtocol {
         view?.tableView.dataSource = tableDataSource
     }
     
-    
     private func getDefaultList(){
         interactor?.fetchList()
     }
@@ -49,6 +50,10 @@ extension SelectorPresenter: SelectorInteractorToPresenterProtocol {
     
     func fetchedListDataSuccess(_ model: [SelectorResultsList]) {
         print("Model: ", model)
+        data = model
+        tableDataSource = SelectorTableDataSource(data: data)
+        view?.tableView.dataSource = tableDataSource
+        view?.tableView.reloadData()
     }
     
     func fetchedListDataFailed(_ error: Error) {

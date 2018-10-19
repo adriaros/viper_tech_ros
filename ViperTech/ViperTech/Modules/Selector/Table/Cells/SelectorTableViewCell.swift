@@ -31,7 +31,22 @@ class SelectorTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    }
+    
+    func displayCell(info: SelectorResultsList){
+        titleLbl.text = info.trackName
+        artistLbl.text = info.artistName
+        albumLbl.text = info.collectionName
+        genreLbl.text = info.kind
+        priceLbl.text = "\(String(describing: info.trackPrice))"
+        durationLbl.text = "\(String(describing: info.trackTimeMillis))"
+        getImage(image: info.artworkUrl100)
+    }
+    
+    private func getImage(image: String?){
+        guard let img = image else { return }
+        let url = URL(string: img)
+        let data = try? Data(contentsOf: url!)
+        albumImageView.image = UIImage(data: data!)
     }
 }

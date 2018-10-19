@@ -20,4 +20,5 @@ struct SelectorResultsList: Codable {
     let currency: String?
     let artworkUrl100: String?
     let previewUrl: String?
+    let trackTimeMillis: Int?
 }
