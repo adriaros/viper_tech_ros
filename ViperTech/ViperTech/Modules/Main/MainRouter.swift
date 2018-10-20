@@ -27,9 +27,7 @@ class MainRouter: MainPresenterToRouterProtocol{
     }
     
     func navigateToSelector(origin: UIViewController){
-        //origin.navigationController?.pushViewController(SelectorRouter.createModule(), animated: true)
-        
         guard let navigationController = origin.navigationController as? NavigationBar else {return}
-        navigationController.setViewControllers([SelectorRouter.createModule()], animated: true)
+        navigationController.setViewControllers([SelectorRouter.createModule()], animated: false)
     }
 }
