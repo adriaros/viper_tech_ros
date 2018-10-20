@@ -28,6 +28,13 @@ class SelectorDetailPresenter: SelectorDetailViewToPresenterProtocol {
         currentIndex = index
         displayInformation()
         prepareSession()
+        prepareSong()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(songFinished), name: .AVPlayerItemDidPlayToEndTime, object: nil)
+    }
+    
+    @objc func songFinished(notification : NSNotification) {
+        interactor?.nextSong(index: currentIndex)
     }
     
     private func displayInformation(){
