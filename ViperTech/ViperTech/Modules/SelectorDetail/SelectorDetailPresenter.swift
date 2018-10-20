@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class SelectorDetailPresenter: SelectorDetailViewToPresenterProtocol {
     
@@ -17,12 +18,15 @@ class SelectorDetailPresenter: SelectorDetailViewToPresenterProtocol {
     var data = SelectorSingleton.sharedInstance.resultsArray
     var index = Int()
     var currentIndex = 0
-    var isPlay = false
+    
+    var player:AVPlayer?
+    var playerItem:AVPlayerItem?
     
     func updateView() {
         displayAlbumImage(image: data[index].artworkUrl100)
         displayInformation()
         currentIndex = index
+        prepareSession()
     }
     
     private func displayInformation(){
@@ -38,15 +42,32 @@ class SelectorDetailPresenter: SelectorDetailViewToPresenterProtocol {
     }
     
     func playPausePressed() {
-        isPlay = !isPlay
+        prepareSong()
     }
     
     func nextSongPressed() {
+        player?.pause()
         interactor?.nextSong(index: currentIndex)
     }
     
     func previousSongPressed() {
+        player?.pause()
         interactor?.previousSong(index: currentIndex)
+    }
+    
+    private func prepareSession(){
+        guard let song = data[currentIndex].previewUrl else { return }
+        let url = URL(string: song)
+        let playerItem:AVPlayerItem = AVPlayerItem(url: url!)
+        player = AVPlayer(playerItem: playerItem)
+    }
+    
+    private func prepareSong(){
+        if player?.rate == 0 {
+            player!.play()
+        } else {
+            player!.pause()
+        }
     }
 }
 
@@ -56,12 +77,16 @@ extension SelectorDetailPresenter: SelectorDetailInteractorToPresenterProtocol {
         currentIndex = index
         displayInformation()
         displayAlbumImage(image: data[currentIndex].artworkUrl100)
+        prepareSession()
+        prepareSong()
     }
     
     func previousSong(index: Int) {
         currentIndex = index
         displayInformation()
         displayAlbumImage(image: data[currentIndex].artworkUrl100)
+        prepareSession()
+        prepareSong()
     }
 
 }
