@@ -16,6 +16,7 @@ class SelectorDetailViewController: UIViewController {
     @IBOutlet weak var artistNameLbl: UILabel!
     @IBOutlet weak var songNameLbl: UILabel!
     @IBOutlet weak var playPauseButton: UIButton!
+    @IBOutlet weak var albumImageContainer: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

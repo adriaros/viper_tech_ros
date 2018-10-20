@@ -9,6 +9,7 @@
 import UIKit
 
 enum PickerTypes: String, CaseIterable {
+    case noFilter = "selector_picker.noFilter"
     case timeH = "selector_picker_timeH"
     case timeL = "selector_picker_timeL"
     case priceH = "selector_picker_priceH"

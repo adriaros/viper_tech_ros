@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectorDetailViewController" customModule="ViperTech" customModuleProvider="target">
             <connections>
                 <outlet property="albumImage" destination="3NM-p0-1ZW" id="Sy8-V1-fo2"/>
+                <outlet property="albumImageContainer" destination="nB9-cu-Oc1" id="qI9-tl-WLZ"/>
                 <outlet property="artistNameLbl" destination="cV8-0w-Fbb" id="fbV-bw-i1b"/>
                 <outlet property="playPauseButton" destination="1we-rI-AbM" id="s4K-Q6-QEq"/>
                 <outlet property="songNameLbl" destination="F8i-rd-bx3" id="gu5-NL-KJW"/>
@@ -65,16 +66,16 @@
                                             <rect key="frame" x="94" y="66" width="187.5" height="187.5"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3NM-p0-1ZW">
-                                                    <rect key="frame" x="0.0" y="0.0" width="187.5" height="187.5"/>
+                                                    <rect key="frame" x="1" y="1" width="185.5" height="185.5"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="3NM-p0-1ZW" secondAttribute="trailing" id="JlE-nA-C3g"/>
-                                                <constraint firstAttribute="bottom" secondItem="3NM-p0-1ZW" secondAttribute="bottom" id="YNx-Om-XTu"/>
+                                                <constraint firstAttribute="trailing" secondItem="3NM-p0-1ZW" secondAttribute="trailing" constant="1" id="JlE-nA-C3g"/>
+                                                <constraint firstAttribute="bottom" secondItem="3NM-p0-1ZW" secondAttribute="bottom" constant="1" id="YNx-Om-XTu"/>
                                                 <constraint firstAttribute="width" secondItem="nB9-cu-Oc1" secondAttribute="height" multiplier="1:1" id="Ygi-lU-O7h"/>
-                                                <constraint firstItem="3NM-p0-1ZW" firstAttribute="top" secondItem="nB9-cu-Oc1" secondAttribute="top" id="rz0-4l-dVz"/>
-                                                <constraint firstItem="3NM-p0-1ZW" firstAttribute="leading" secondItem="nB9-cu-Oc1" secondAttribute="leading" id="wEP-O4-gll"/>
+                                                <constraint firstItem="3NM-p0-1ZW" firstAttribute="top" secondItem="nB9-cu-Oc1" secondAttribute="top" constant="1" id="rz0-4l-dVz"/>
+                                                <constraint firstItem="3NM-p0-1ZW" firstAttribute="leading" secondItem="nB9-cu-Oc1" secondAttribute="leading" constant="1" id="wEP-O4-gll"/>
                                             </constraints>
                                         </view>
                                     </subviews>

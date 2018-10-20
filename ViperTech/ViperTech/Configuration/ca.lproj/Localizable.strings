@@ -13,6 +13,7 @@
 "mainbutton_title" = "Començar";
 
 //Selector
+"selector_picker.noFilter" = "Sense Filtre";
 "selector_picker_timeH" = "Duració Major - Menor";
 "selector_picker_timeL" = "Duració Menor - Major";
 "selector_picker_priceH" = "Preu Major - Menor";

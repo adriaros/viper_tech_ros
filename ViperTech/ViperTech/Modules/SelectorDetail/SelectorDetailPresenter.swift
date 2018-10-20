@@ -15,7 +15,7 @@ class SelectorDetailPresenter: SelectorDetailViewToPresenterProtocol {
     var interactor: SelectorDetailPresenterToInteractorProtocol?
     var router: SelectorDetailPresenterToRouterProtocol?
     
-    var data = SelectorSingleton.sharedInstance.resultsArray
+    var data = SelectorSingleton.sharedInstance.filteredArray
     var index = Int()
     var currentIndex = 0
     
@@ -23,7 +23,7 @@ class SelectorDetailPresenter: SelectorDetailViewToPresenterProtocol {
     var playerItem:AVPlayerItem?
     
     func updateView() {
-        view?.albumImage.shadow()
+        view?.albumImageContainer.shadow()
         displayAlbumImage(image: data[index].artworkUrl100)
         currentIndex = index
         displayInformation()
@@ -66,8 +66,10 @@ class SelectorDetailPresenter: SelectorDetailViewToPresenterProtocol {
     private func prepareSong(){
         if player?.rate == 0 {
             player!.play()
+            view?.playPauseButton.setImage(UIImage(named: "Pause.png"), for: .normal)
         } else {
             player!.pause()
+            view?.playPauseButton.setImage(UIImage(named: "Play.png"), for: .normal)
         }
     }
     

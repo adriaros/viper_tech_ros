@@ -68,6 +68,7 @@ class SelectorPresenter: SelectorViewToPresenterProtocol {
     func searchButtonPressed(){
         guard let text = view?.searchTextField.text else { return }
         if text != "" {
+            view?.pickerView.selectRow(0, inComponent: 0, animated: false)
             vc?.showLoader()
             interactor?.search(withInfo: text)
         }
@@ -76,16 +77,23 @@ class SelectorPresenter: SelectorViewToPresenterProtocol {
 
 extension SelectorPresenter: SelectorInteractorToPresenterProtocol {
     
+    func filteredList(_ list: [SelectorResultsList]) {
+        SelectorSingleton.sharedInstance.filteredArray = list
+        tableDataSource = SelectorTableDataSource(data: list)
+        view?.tableView.dataSource = tableDataSource
+        view?.tableView.reloadData()
+    }
+    
     func fetchedListDataSuccess(_ model: [SelectorResultsList]) {
         SelectorSingleton.sharedInstance.resultsArray = model
-        tableDataSource = SelectorTableDataSource(data: SelectorSingleton.sharedInstance.resultsArray)
+        SelectorSingleton.sharedInstance.filteredArray = model
+        tableDataSource = SelectorTableDataSource(data: SelectorSingleton.sharedInstance.filteredArray)
         view?.tableView.dataSource = tableDataSource
         view?.tableView.reloadData()
         vc?.hideLoader()
     }
     
     func fetchedListDataFailed(_ error: Error) {
-        print("Error: ", error)
         vc?.hideLoader()
     }
 }
@@ -97,13 +105,10 @@ extension SelectorPresenter: SelectorTableActionDelegate {
     }
 }
 
-private var selectedPickerOption = PickerTypes.allCases[0].localizedString
-private var selectedPickerNum = 0
-
 extension SelectorPresenter: SelectorPickerActionDelegate {
+    
     func optionSelected(index: Int) {
-        selectedPickerNum = index
-        selectedPickerOption = PickerTypes.allCases[index].localizedString
-        view?.tableView.reloadData()
+        interactor?.filterList(pickerIndex: index)
     }
+    
 }
