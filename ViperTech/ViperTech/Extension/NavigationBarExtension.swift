@@ -29,7 +29,6 @@ enum NavigationBarRight {
 class NavigationBar: UINavigationController {
     //MARK: - Properties
     var configurationType: NavigationBarType = .plain
-    fileprivate var menuShowed = false
     fileprivate var target: UIViewController!
     
     override var viewControllers: [UIViewController] {
