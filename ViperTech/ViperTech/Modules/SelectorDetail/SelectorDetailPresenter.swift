@@ -23,6 +23,7 @@ class SelectorDetailPresenter: SelectorDetailViewToPresenterProtocol {
     var playerItem:AVPlayerItem?
     
     func updateView() {
+        view?.albumImage.shadow()
         displayAlbumImage(image: data[index].artworkUrl100)
         currentIndex = index
         displayInformation()

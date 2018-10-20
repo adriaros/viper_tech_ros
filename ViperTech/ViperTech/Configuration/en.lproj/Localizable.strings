@@ -19,3 +19,4 @@
 "selector_picker_priceL" = "Price Lower - Price";
 "selector_picker_genreAZ" = "Genre A-Z";
 "selector_picker_genreZA" = "Genre Z-A";
+"selector_filter_lbl" = "Filter:";

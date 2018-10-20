@@ -30,6 +30,8 @@ final class SelectorTableDataSource: NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SelectorTableViewCell.cellType, for: indexPath) as? SelectorTableViewCell else {return UITableViewCell()}
         cell.displayCell(info: data![indexPath.row])
+        cell.contentView.backgroundColor = UIColor.clear
+        cell.backgroundColor = UIColor.clear
         return cell
     }
     

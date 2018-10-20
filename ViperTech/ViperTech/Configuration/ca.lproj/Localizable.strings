@@ -19,3 +19,4 @@
 "selector_picker_priceL" = "Preu Menor - Major";
 "selector_picker_genreAZ" = "Génere A-Z";
 "selector_picker_genreZA" = "Génere Z-A";
+"selector_filter_lbl" = "Filtre:";

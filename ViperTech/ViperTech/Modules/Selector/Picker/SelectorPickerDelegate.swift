@@ -21,11 +21,20 @@ final class SelectorPickerDelegate: NSObject, UIPickerViewDelegate {
         self.delegate = actionDelegate
     }
     
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return PickerTypes.allCases[row].localizedString
-    }
-    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int){
         delegate?.optionSelected(index: row)
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        var pickerLabel: UILabel? = (view as? UILabel)
+        if pickerLabel == nil {
+            pickerLabel = UILabel()
+            pickerLabel?.font = UIFont(name: "System", size: 12)
+            pickerLabel?.textAlignment = .left
+        }
+        
+        pickerLabel?.text = PickerTypes.allCases[row].localizedString
+        
+        return pickerLabel!
     }
 }

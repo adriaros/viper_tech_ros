@@ -19,3 +19,4 @@
 "selector_picker_priceL" = "Precio Menor - Mayor";
 "selector_picker_genreAZ" = "Género A-Z";
 "selector_picker_genreZA" = "Género Z-A";
+"selector_filter_lbl" = "Filtro:";

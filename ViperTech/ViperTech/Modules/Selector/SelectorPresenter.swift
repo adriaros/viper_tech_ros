@@ -31,9 +31,18 @@ class SelectorPresenter: SelectorViewToPresenterProtocol {
     let vc = UIApplication.topViewController()
     
     func updateView() {
+        configViews()
         configTable()
         configPicker()
         getDefaultList()
+    }
+    
+    private func configViews(){
+        view?.searchButtonView.shadow()
+        view?.seachView.shadow()
+        view?.filterView.shadow()
+        view?.filterLbl.text = "selector_filter_lbl".localized()
+        view?.filterLbl.adjustsFontSizeToFitWidth = true
     }
     
     private func configTable() {
