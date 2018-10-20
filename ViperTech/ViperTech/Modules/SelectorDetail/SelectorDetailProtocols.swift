@@ -35,6 +35,7 @@ protocol SelectorDetailViewToPresenterProtocol: class{
     func playPausePressed()
     func nextSongPressed()
     func previousSongPressed()
+    func stopAll()
 }
 
 protocol SelectorDetailPresenterToRouterProtocol: class{

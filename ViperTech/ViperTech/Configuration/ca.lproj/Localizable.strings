@@ -11,3 +11,11 @@
 
 //Main
 "mainbutton_title" = "Començar";
+
+//Selector
+"selector_picker_timeH" = "Duració Major - Menor";
+"selector_picker_timeL" = "Duració Menor - Major";
+"selector_picker_priceH" = "Preu Major - Menor";
+"selector_picker_priceL" = "Preu Menor - Major";
+"selector_picker_genreAZ" = "Génere A-Z";
+"selector_picker_genreZA" = "Génere Z-A";

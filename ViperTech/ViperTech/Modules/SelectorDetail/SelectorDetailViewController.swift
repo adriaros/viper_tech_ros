@@ -24,6 +24,10 @@ class SelectorDetailViewController: UIViewController {
         navigationController?.navigationBar.backgroundColor = UIColor.clear
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        presenter?.stopAll()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }

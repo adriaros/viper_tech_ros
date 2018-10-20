@@ -53,6 +53,8 @@
 		FB97B057217A0B6F0056CA70 /* TimeTervalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97B056217A0B6F0056CA70 /* TimeTervalExtension.swift */; };
 		FB97B059217A20890056CA70 /* SelectorSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97B058217A20890056CA70 /* SelectorSingleton.swift */; };
 		FB97B05B217A27DD0056CA70 /* SelectorDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB97B05A217A27DD0056CA70 /* SelectorDetailViewController.xib */; };
+		FB97B05E217B2AF80056CA70 /* SelectorPickerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97B05D217B2AF80056CA70 /* SelectorPickerDelegate.swift */; };
+		FB97B060217B2B0B0056CA70 /* SelectorPickerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97B05F217B2B0B0056CA70 /* SelectorPickerDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +110,8 @@
 		FB97B056217A0B6F0056CA70 /* TimeTervalExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTervalExtension.swift; sourceTree = "<group>"; };
 		FB97B058217A20890056CA70 /* SelectorSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SelectorSingleton.swift; path = "../../../../../../../../Projects/MED_FB/Workspace/iOS-master-2e213604c618d5cc48f6ea69588ae376eaadb446/SelectorSingleton.swift"; sourceTree = "<group>"; };
 		FB97B05A217A27DD0056CA70 /* SelectorDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectorDetailViewController.xib; sourceTree = "<group>"; };
+		FB97B05D217B2AF80056CA70 /* SelectorPickerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorPickerDelegate.swift; sourceTree = "<group>"; };
+		FB97B05F217B2B0B0056CA70 /* SelectorPickerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorPickerDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +219,7 @@
 		FB84524B21788F21001BA9D7 /* Selector */ = {
 			isa = PBXGroup;
 			children = (
+				FB97B05C217B2AD50056CA70 /* Picker */,
 				FB84524D21788F37001BA9D7 /* Table */,
 				FB84524E21788F4C001BA9D7 /* SelectorPresenter.swift */,
 				FB84524F21788F4C001BA9D7 /* SelectorRouter.swift */,
@@ -328,6 +333,15 @@
 				FB97B058217A20890056CA70 /* SelectorSingleton.swift */,
 			);
 			path = Selector;
+			sourceTree = "<group>";
+		};
+		FB97B05C217B2AD50056CA70 /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				FB97B05D217B2AF80056CA70 /* SelectorPickerDelegate.swift */,
+				FB97B05F217B2B0B0056CA70 /* SelectorPickerDataSource.swift */,
+			);
+			path = Picker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -469,6 +483,7 @@
 				FB97B057217A0B6F0056CA70 /* TimeTervalExtension.swift in Sources */,
 				FB97B0502179EF2C0056CA70 /* APIClient.swift in Sources */,
 				FB84524321786FA3001BA9D7 /* MainProtocols.swift in Sources */,
+				FB97B060217B2B0B0056CA70 /* SelectorPickerDataSource.swift in Sources */,
 				FB97B0552179F8610056CA70 /* SelectorServices.swift in Sources */,
 				FB84522221786B36001BA9D7 /* AppDelegate.swift in Sources */,
 				FB84526C2179C8F7001BA9D7 /* SelectorTableDelegate.swift in Sources */,
@@ -479,6 +494,7 @@
 				FB97B04E2179EF210056CA70 /* APIConfigurator.swift in Sources */,
 				FB84526121789EA3001BA9D7 /* NavigationBarExtension.swift in Sources */,
 				FB97B059217A20890056CA70 /* SelectorSingleton.swift in Sources */,
+				FB97B05E217B2AF80056CA70 /* SelectorPickerDelegate.swift in Sources */,
 				FB84525921788F4C001BA9D7 /* SelectorEntities.swift in Sources */,
 				FB84524821787247001BA9D7 /* StoryboardExtension.swift in Sources */,
 				FB84526A2179C8E8001BA9D7 /* SelectorTableDataSource.swift in Sources */,

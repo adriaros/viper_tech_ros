@@ -15,6 +15,8 @@ class SelectorViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var searchButtonView: UIView!
+    @IBOutlet weak var filterLbl: UILabel!
+    @IBOutlet weak var pickerView: UIPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,5 +34,4 @@ class SelectorViewController: UIViewController {
 }
 
 extension SelectorViewController: SelectorPresenterToViewProtocol {
-
 }

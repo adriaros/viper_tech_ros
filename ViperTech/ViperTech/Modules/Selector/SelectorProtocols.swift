@@ -12,6 +12,8 @@ protocol SelectorPresenterToViewProtocol: class{
     var tableView: UITableView!  { get set }
     var searchTextField: UITextField! { get set }
     var searchButtonView: UIView! { get set }
+    var filterLbl: UILabel! { get set }
+    var pickerView: UIPickerView! { get set }
 }
 
 protocol SelectorInteractorToPresenterProtocol: class{

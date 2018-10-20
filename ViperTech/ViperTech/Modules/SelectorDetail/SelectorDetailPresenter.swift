@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 
 class SelectorDetailPresenter: SelectorDetailViewToPresenterProtocol {
-    
+
     var view: SelectorDetailPresenterToViewProtocol?
     var interactor: SelectorDetailPresenterToInteractorProtocol?
     var router: SelectorDetailPresenterToRouterProtocol?
@@ -24,8 +24,8 @@ class SelectorDetailPresenter: SelectorDetailViewToPresenterProtocol {
     
     func updateView() {
         displayAlbumImage(image: data[index].artworkUrl100)
-        displayInformation()
         currentIndex = index
+        displayInformation()
         prepareSession()
     }
     
@@ -69,6 +69,11 @@ class SelectorDetailPresenter: SelectorDetailViewToPresenterProtocol {
             player!.pause()
         }
     }
+    
+    func stopAll() {
+        player?.pause()
+    }
+    
 }
 
 extension SelectorDetailPresenter: SelectorDetailInteractorToPresenterProtocol {

@@ -20,10 +20,19 @@ class SelectorPresenter: SelectorViewToPresenterProtocol {
     
     private var tableDataSource: SelectorTableDataSource?
     
+    private lazy var pickerDelegate: SelectorPickerDelegate = {
+        return SelectorPickerDelegate(actionDelegate: self)
+    }()
+    
+    private lazy var pickerDataSource: SelectorPickerDataSource = {
+        return SelectorPickerDataSource()
+    }()
+    
     let vc = UIApplication.topViewController()
     
     func updateView() {
         configTable()
+        configPicker()
         getDefaultList()
     }
     
@@ -36,6 +45,11 @@ class SelectorPresenter: SelectorViewToPresenterProtocol {
         tableDataSource = SelectorTableDataSource()
         view?.tableView.dataSource = tableDataSource
     }
+
+    private func configPicker(){
+        view?.pickerView.delegate = pickerDelegate
+        view?.pickerView.dataSource = pickerDataSource
+    }
     
     private func getDefaultList(){
         vc?.showLoader()
@@ -43,9 +57,11 @@ class SelectorPresenter: SelectorViewToPresenterProtocol {
     }
     
     func searchButtonPressed(){
-        vc?.showLoader()
         guard let text = view?.searchTextField.text else { return }
-        if text != "" { interactor?.search(withInfo: text) }
+        if text != "" {
+            vc?.showLoader()
+            interactor?.search(withInfo: text)
+        }
     }
 }
 
@@ -69,5 +85,16 @@ extension SelectorPresenter: SelectorTableActionDelegate {
     func selected(index: Int) {
         guard let vc = view as? UIViewController else { return }
         router?.navigateToDetail(origin: vc, index)
+    }
+}
+
+private var selectedPickerOption = PickerTypes.allCases[0].localizedString
+private var selectedPickerNum = 0
+
+extension SelectorPresenter: SelectorPickerActionDelegate {
+    func optionSelected(index: Int) {
+        selectedPickerNum = index
+        selectedPickerOption = PickerTypes.allCases[index].localizedString
+        view?.tableView.reloadData()
     }
 }
