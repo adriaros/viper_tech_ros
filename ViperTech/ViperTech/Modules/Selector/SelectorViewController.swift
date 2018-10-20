@@ -15,10 +15,15 @@ class SelectorViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var searchButtonView: UIView!
+    @IBOutlet weak var filterLbl: UILabel!
+    @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet weak var filterView: UIView!
+    @IBOutlet weak var seachView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.updateView()
+        tableView.backgroundColor = UIColor.clear
     }
     
     override func didReceiveMemoryWarning() {
@@ -32,5 +37,4 @@ class SelectorViewController: UIViewController {
 }
 
 extension SelectorViewController: SelectorPresenterToViewProtocol {
-
 }

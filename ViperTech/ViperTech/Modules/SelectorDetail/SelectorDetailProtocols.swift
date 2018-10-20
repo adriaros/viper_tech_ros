@@ -13,6 +13,7 @@ protocol SelectorDetailPresenterToViewProtocol: class{
     var artistNameLbl: UILabel! { get set }
     var songNameLbl: UILabel! { get set }
     var playPauseButton: UIButton! { get set }
+    var albumImageContainer: UIView! { get set }
 }
 
 protocol SelectorDetailInteractorToPresenterProtocol: class{
@@ -35,6 +36,7 @@ protocol SelectorDetailViewToPresenterProtocol: class{
     func playPausePressed()
     func nextSongPressed()
     func previousSongPressed()
+    func stopAll()
 }
 
 protocol SelectorDetailPresenterToRouterProtocol: class{

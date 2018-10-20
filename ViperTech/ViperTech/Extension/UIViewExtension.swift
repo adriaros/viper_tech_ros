@@ -14,7 +14,7 @@ extension UIView {
         self.layer.cornerRadius = h / 4
         self.layer.masksToBounds = true
     }
-    func cellShadow(){
+    func shadow(){
         self.layer.shadowColor = UIColor.gray.cgColor
         self.layer.shadowOpacity = 0.7
         self.layer.shadowOffset = CGSize.zero

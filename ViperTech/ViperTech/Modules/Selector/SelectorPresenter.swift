@@ -20,11 +20,29 @@ class SelectorPresenter: SelectorViewToPresenterProtocol {
     
     private var tableDataSource: SelectorTableDataSource?
     
+    private lazy var pickerDelegate: SelectorPickerDelegate = {
+        return SelectorPickerDelegate(actionDelegate: self)
+    }()
+    
+    private lazy var pickerDataSource: SelectorPickerDataSource = {
+        return SelectorPickerDataSource()
+    }()
+    
     let vc = UIApplication.topViewController()
     
     func updateView() {
+        configViews()
         configTable()
+        configPicker()
         getDefaultList()
+    }
+    
+    private func configViews(){
+        view?.searchButtonView.shadow()
+        view?.seachView.shadow()
+        view?.filterView.shadow()
+        view?.filterLbl.text = "selector_filter_lbl".localized()
+        view?.filterLbl.adjustsFontSizeToFitWidth = true
     }
     
     private func configTable() {
@@ -36,6 +54,11 @@ class SelectorPresenter: SelectorViewToPresenterProtocol {
         tableDataSource = SelectorTableDataSource()
         view?.tableView.dataSource = tableDataSource
     }
+
+    private func configPicker(){
+        view?.pickerView.delegate = pickerDelegate
+        view?.pickerView.dataSource = pickerDataSource
+    }
     
     private func getDefaultList(){
         vc?.showLoader()
@@ -43,24 +66,34 @@ class SelectorPresenter: SelectorViewToPresenterProtocol {
     }
     
     func searchButtonPressed(){
-        vc?.showLoader()
         guard let text = view?.searchTextField.text else { return }
-        if text != "" { interactor?.search(withInfo: text) }
+        if text != "" {
+            view?.pickerView.selectRow(0, inComponent: 0, animated: false)
+            vc?.showLoader()
+            interactor?.search(withInfo: text)
+        }
     }
 }
 
 extension SelectorPresenter: SelectorInteractorToPresenterProtocol {
     
+    func filteredList(_ list: [SelectorResultsList]) {
+        SelectorSingleton.sharedInstance.filteredArray = list
+        tableDataSource = SelectorTableDataSource(data: list)
+        view?.tableView.dataSource = tableDataSource
+        view?.tableView.reloadData()
+    }
+    
     func fetchedListDataSuccess(_ model: [SelectorResultsList]) {
         SelectorSingleton.sharedInstance.resultsArray = model
-        tableDataSource = SelectorTableDataSource(data: SelectorSingleton.sharedInstance.resultsArray)
+        SelectorSingleton.sharedInstance.filteredArray = model
+        tableDataSource = SelectorTableDataSource(data: SelectorSingleton.sharedInstance.filteredArray)
         view?.tableView.dataSource = tableDataSource
         view?.tableView.reloadData()
         vc?.hideLoader()
     }
     
     func fetchedListDataFailed(_ error: Error) {
-        print("Error: ", error)
         vc?.hideLoader()
     }
 }
@@ -70,4 +103,12 @@ extension SelectorPresenter: SelectorTableActionDelegate {
         guard let vc = view as? UIViewController else { return }
         router?.navigateToDetail(origin: vc, index)
     }
+}
+
+extension SelectorPresenter: SelectorPickerActionDelegate {
+    
+    func optionSelected(index: Int) {
+        interactor?.filterList(pickerIndex: index)
+    }
+    
 }

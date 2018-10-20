@@ -16,12 +16,17 @@ class SelectorDetailViewController: UIViewController {
     @IBOutlet weak var artistNameLbl: UILabel!
     @IBOutlet weak var songNameLbl: UILabel!
     @IBOutlet weak var playPauseButton: UIButton!
+    @IBOutlet weak var albumImageContainer: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.updateView()
         navigationController?.navigationBar.topItem?.title = ""
         navigationController?.navigationBar.backgroundColor = UIColor.clear
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        presenter?.stopAll()
     }
     
     override func didReceiveMemoryWarning() {

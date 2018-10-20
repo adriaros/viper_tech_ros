@@ -22,7 +22,8 @@ class SelectorTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        cellView.cellShadow()
+        cellView.shadow()
+        cellView.backgroundColor = UIColor(white: 1, alpha: 0.6)
         self.selectionStyle = .none
     }
     

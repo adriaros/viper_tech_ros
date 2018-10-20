@@ -58,4 +58,36 @@ class SelectorInteractor: SelectorPresenterToInteractorProtocol{
             
         }
     }
+    
+    func filterList(pickerIndex: Int) {
+        
+        let resultsArray = SelectorSingleton.sharedInstance.resultsArray
+        var filteredArray = SelectorSingleton.sharedInstance.resultsArray
+        
+        switch pickerIndex {
+        case 1:
+            filteredArray = resultsArray.sorted(by: { $0.trackTimeMillis! > $1.trackTimeMillis! })
+            break
+        case 2:
+            filteredArray = resultsArray.sorted(by: { $0.trackTimeMillis! < $1.trackTimeMillis! })
+            break
+        case 3:
+            filteredArray = resultsArray.sorted(by: { $0.trackPrice! > $1.trackPrice! })
+            break
+        case 4:
+            filteredArray = resultsArray.sorted(by: { $0.trackPrice! < $1.trackPrice! })
+            break
+        case 5:
+            filteredArray = resultsArray.sorted(by: { $0.primaryGenreName! < $1.primaryGenreName! })
+            break
+        case 6:
+            filteredArray = resultsArray.sorted(by: { $0.primaryGenreName! > $1.primaryGenreName! })
+            break
+        default:
+            filteredArray = resultsArray
+            break
+        }
+        
+        presenter?.filteredList(filteredArray)
+    }
 }

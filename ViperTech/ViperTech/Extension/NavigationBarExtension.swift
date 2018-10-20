@@ -111,6 +111,8 @@ extension NavigationBar {
         switch type {
         case .title(let text):
             target.navigationItem.title = text
+            let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+            target.navigationController?.navigationBar.titleTextAttributes = textAttributes
         }
     }
     
