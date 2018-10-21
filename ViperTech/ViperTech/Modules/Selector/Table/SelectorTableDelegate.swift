@@ -24,8 +24,6 @@ final class SelectorTableDelegate: NSObject, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         delegate?.selected(index: indexPath.row)
     }
-    
-    
 }
 
 

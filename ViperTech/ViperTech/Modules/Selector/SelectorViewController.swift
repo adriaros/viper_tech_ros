@@ -23,7 +23,7 @@ class SelectorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter?.updateView()
-        tableView.backgroundColor = UIColor.clear
+        hideKeyboardWhenTappedAround()
     }
     
     override func didReceiveMemoryWarning() {

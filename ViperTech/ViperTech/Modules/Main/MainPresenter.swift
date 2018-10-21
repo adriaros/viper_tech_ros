@@ -17,6 +17,7 @@ class MainPresenter: MainViewToPresenterProtocol {
     func updateView() {
         view?.startButton.roundCorners()
         view?.startButton.setTitle("mainbutton_title".localized(), for: .normal)
+        view?.titleLbl.text = "main_title_lbl".localized()
     }
     
     func startButtonPressed() {

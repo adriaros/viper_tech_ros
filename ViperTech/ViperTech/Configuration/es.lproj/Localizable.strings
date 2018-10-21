@@ -11,6 +11,7 @@
 
 //Main
 "mainbutton_title" = "Empezar";
+"main_title_lbl" = "¡Bienvenido!";
 
 //Selector
 "selector_picker.noFilter" = "Sin Filtro";
@@ -21,3 +22,7 @@
 "selector_picker_genreAZ" = "Género A-Z";
 "selector_picker_genreZA" = "Género Z-A";
 "selector_filter_lbl" = "Filtro:";
+"selector_data_loading_fail_title" = "Error de LLamada al Servicio";
+
+//Alert
+"alert_ok_button" = "Entendido";

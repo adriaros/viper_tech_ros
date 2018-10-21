@@ -11,6 +11,7 @@
 
 //Main
 "mainbutton_title" = "Get Started";
+"main_title_lbl" = "Welcome!";
 
 //Selector
 "selector_picker.noFilter" = "No Filter";
@@ -21,3 +22,7 @@
 "selector_picker_genreAZ" = "Genre A-Z";
 "selector_picker_genreZA" = "Genre Z-A";
 "selector_filter_lbl" = "Filter:";
+"selector_data_loading_fail_title" = "Service Call Error";
+
+//Alert
+"alert_ok_button" = "Okay";
