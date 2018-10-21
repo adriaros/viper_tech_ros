@@ -26,3 +26,12 @@
 
 //Alert
 "alert_ok_button" = "D'acord";
+"song_media_error_title" = "Error de Reproducción";
+"song_media_error_message" = "Aquesta cançó no està disponible";
+"filter_no_possible" = "Filtre No Disponible";
+"no_filter_time" = "Filtre per duració no està disponible";
+"no_filter_price" = "Filtre per preu no està disponible";
+"no_filter_genre" = "Filtre per génere no està disponible";
+
+//SocialMedia
+"facebook_shared_text" = "Aquesta és la meva cançó!";

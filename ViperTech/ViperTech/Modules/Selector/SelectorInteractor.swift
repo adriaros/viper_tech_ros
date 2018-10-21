@@ -72,28 +72,69 @@ class SelectorInteractor: SelectorPresenterToInteractorProtocol{
         
         switch pickerIndex {
         case 1:
+            if filterByTimeAvailable(resultsArray){
             filteredArray = resultsArray.sorted(by: { $0.trackTimeMillis! > $1.trackTimeMillis! })
+            }
             break
         case 2:
+            if filterByTimeAvailable(resultsArray){
             filteredArray = resultsArray.sorted(by: { $0.trackTimeMillis! < $1.trackTimeMillis! })
+            }
             break
         case 3:
+            if filterByPriceAvailable(resultsArray){
             filteredArray = resultsArray.sorted(by: { $0.trackPrice! > $1.trackPrice! })
+            }
             break
         case 4:
+            if filterByPriceAvailable(resultsArray){
             filteredArray = resultsArray.sorted(by: { $0.trackPrice! < $1.trackPrice! })
+            }
             break
         case 5:
+            if filterByGenreAvailable(resultsArray){
             filteredArray = resultsArray.sorted(by: { $0.primaryGenreName! < $1.primaryGenreName! })
+            }
             break
         case 6:
+            if filterByGenreAvailable(resultsArray){
             filteredArray = resultsArray.sorted(by: { $0.primaryGenreName! > $1.primaryGenreName! })
+            }
             break
         default:
-            filteredArray = resultsArray
             break
         }
         
         presenter?.filteredList(filteredArray)
+    }
+    
+    private func filterByTimeAvailable(_ data: [SelectorResultsList]) -> Bool {
+        for i in 0...data.count-1 {
+            if data[i].trackTimeMillis == nil {
+                showAlert(title: "filter_no_possible".localized(), message: "no_filter_time".localized())
+                return false
+            }
+        }
+        return true
+    }
+    
+    private func filterByPriceAvailable(_ data: [SelectorResultsList]) -> Bool {
+        for i in 0...data.count-1 {
+            if data[i].trackPrice == nil {
+                showAlert(title: "filter_no_possible".localized(), message: "no_filter_price".localized())
+                return false
+            }
+        }
+        return true
+    }
+    
+    private func filterByGenreAvailable(_ data: [SelectorResultsList]) -> Bool {
+        for i in 0...data.count-1 {
+            if data[i].primaryGenreName == nil {
+                showAlert(title: "filter_no_possible".localized(), message: "no_filter_genre".localized())
+                return false
+            }
+        }
+        return true
     }
 }

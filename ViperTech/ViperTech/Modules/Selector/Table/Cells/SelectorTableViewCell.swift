@@ -36,12 +36,42 @@ class SelectorTableViewCell: UITableViewCell {
     }
     
     func displayCell(info: SelectorResultsList){
-        titleLbl.text = info.trackName
-        artistLbl.text = info.artistName
-        albumLbl.text = info.collectionName
-        genreLbl.text = info.primaryGenreName
-        priceLbl.text = "\(String(describing: info.trackPrice!))" + Constants.Cells.Selector.currency
-        dateLbl.text = "\(String(describing: info.releaseDate!))"
+        guard let song = info.trackName else {
+            titleLbl.text = "-"
+            return
+        }
+        titleLbl.text = song
+
+        guard let artist = info.artistName else {
+            artistLbl.text = "-"
+            return
+        }
+        artistLbl.text = artist
+        
+        guard let collection = info.collectionName else {
+            albumLbl.text = "-"
+            return
+        }
+        albumLbl.text = collection
+        
+        guard let genre = info.primaryGenreName else {
+            genreLbl.text = "-"
+            return
+        }
+        genreLbl.text = genre
+        
+        guard let price = info.trackPrice else {
+           priceLbl.text = "0" + Constants.Cells.Selector.currency
+            return
+        }
+        priceLbl.text = "\(String(describing: price))" + Constants.Cells.Selector.currency
+        
+        guard let date = info.releaseDate else {
+            dateLbl.text = "-"
+            return
+        }
+        dateLbl.text = "\(String(describing: date))"
+        
         displayImage(image: info.artworkUrl100)
         displayDuration(ms: info.trackTimeMillis)
     }

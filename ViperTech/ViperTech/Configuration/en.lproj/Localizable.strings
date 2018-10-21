@@ -26,3 +26,12 @@
 
 //Alert
 "alert_ok_button" = "Okay";
+"song_media_error_title" = "Playback Error";
+"song_media_error_message" = "This song is not available";
+"filter_no_possible" = "Filter Unavailable";
+"no_filter_time" = "Filtring by duration is not possible";
+"no_filter_price" = "Filtring by price is not possible";
+"no_filter_genre" = "Filtring by genre is not possible";
+
+//SocialMedia
+"facebook_shared_text" = "This is my song!";
