@@ -50,6 +50,7 @@ class SelectorPresenter: SelectorViewToPresenterProtocol {
         view?.tableView.rowHeight = ConfigParams.Sizes.Selector.cellHeight
         view?.tableView.bounces = false
         view?.tableView.tableFooterView = UIView()
+        view?.tableView.backgroundColor = UIColor.clear
         view?.tableView.delegate = tableDelegate
         tableDataSource = SelectorTableDataSource()
         view?.tableView.dataSource = tableDataSource
@@ -76,7 +77,7 @@ class SelectorPresenter: SelectorViewToPresenterProtocol {
 }
 
 extension SelectorPresenter: SelectorInteractorToPresenterProtocol {
-    
+
     func filteredList(_ list: [SelectorResultsList]) {
         SelectorSingleton.sharedInstance.filteredArray = list
         tableDataSource = SelectorTableDataSource(data: list)
@@ -94,8 +95,10 @@ extension SelectorPresenter: SelectorInteractorToPresenterProtocol {
     }
     
     func fetchedListDataFailed(_ error: Error) {
+        showAlert(title: "selector_data_loading_fail_title".localized(), message: error.localizedDescription)
         vc?.hideLoader()
     }
+    
 }
 
 extension SelectorPresenter: SelectorTableActionDelegate {

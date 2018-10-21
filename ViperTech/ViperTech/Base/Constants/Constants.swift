@@ -16,11 +16,22 @@ struct Constants {
             static let default_search = "michael+jackson"
             static var item_search = ""
         }
+        struct Service {
+            struct Selector {
+                static let type = "track"
+            }
+        }
     }
     
     struct Cells {
         struct Selector {
             static let currency = "$"
+        }
+    }
+    
+    struct Errors {
+        struct Interns {
+            static let vc_instance = "Couldn’t instantiate view controller with identifier "
         }
     }
 }

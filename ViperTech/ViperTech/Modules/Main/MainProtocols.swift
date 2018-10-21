@@ -10,10 +10,10 @@ import UIKit
 
 protocol MainPresenterToViewProtocol: class{
     var startButton: UIButton! { get set }
+    var titleLbl: UILabel! { get set }
 }
 
 protocol MainInteractorToPresenterProtocol: class{
-    
 }
 
 protocol MainPresenterToInteractorProtocol: class{

@@ -55,6 +55,7 @@
 		FB97B060217B2B0B0056CA70 /* SelectorPickerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97B05F217B2B0B0056CA70 /* SelectorPickerDataSource.swift */; };
 		FB97B066217C65850056CA70 /* SelectorServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97B065217C65850056CA70 /* SelectorServices.swift */; };
 		FB97B069217C65970056CA70 /* SelectorSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97B068217C65970056CA70 /* SelectorSingleton.swift */; };
+		FB97B06C217D10420056CA70 /* AlertUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97B06B217D10420056CA70 /* AlertUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +113,7 @@
 		FB97B05F217B2B0B0056CA70 /* SelectorPickerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorPickerDataSource.swift; sourceTree = "<group>"; };
 		FB97B065217C65850056CA70 /* SelectorServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorServices.swift; sourceTree = "<group>"; };
 		FB97B068217C65970056CA70 /* SelectorSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorSingleton.swift; sourceTree = "<group>"; };
+		FB97B06B217D10420056CA70 /* AlertUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				FB8452672179C6A2001BA9D7 /* ConfigParams.swift */,
+				FB97B06B217D10420056CA70 /* AlertUtils.swift */,
 				FB97B01F2179DC220056CA70 /* Localizable.strings */,
 			);
 			path = Configuration;
@@ -498,6 +501,7 @@
 				FB84525921788F4C001BA9D7 /* SelectorEntities.swift in Sources */,
 				FB84524821787247001BA9D7 /* StoryboardExtension.swift in Sources */,
 				FB84526A2179C8E8001BA9D7 /* SelectorTableDataSource.swift in Sources */,
+				FB97B06C217D10420056CA70 /* AlertUtils.swift in Sources */,
 				FB97B0302179DD6A0056CA70 /* SelectorDetailInteractor.swift in Sources */,
 				FB97B02E2179DD6A0056CA70 /* SelectorDetailViewController.swift in Sources */,
 				FB84525721788F4C001BA9D7 /* SelectorProtocols.swift in Sources */,
@@ -599,7 +603,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -655,7 +659,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -674,7 +678,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EQYUZ4SWRS;
 				INFOPLIST_FILE = ViperTech/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -696,7 +700,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EQYUZ4SWRS;
 				INFOPLIST_FILE = ViperTech/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

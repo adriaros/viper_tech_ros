@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import Social
 
 class SelectorDetailPresenter: SelectorDetailViewToPresenterProtocol {
 
@@ -27,8 +28,14 @@ class SelectorDetailPresenter: SelectorDetailViewToPresenterProtocol {
         displayAlbumImage(image: data[index].artworkUrl100)
         currentIndex = index
         displayInformation()
-        prepareSession()
-        prepareSong()
+        
+        if isSessionAvailable() {
+            prepareSession()
+            prepareSong()
+        } else {
+            showAlert(title: "song_media_error_title".localized(), message: "song_media_error_message".localized())
+        }
+
         
         NotificationCenter.default.addObserver(self, selector: #selector(songFinished), name: .AVPlayerItemDidPlayToEndTime, object: nil)
     }
@@ -70,20 +77,39 @@ class SelectorDetailPresenter: SelectorDetailViewToPresenterProtocol {
         player = AVPlayer(playerItem: playerItem)
     }
     
+    private func isSessionAvailable() -> Bool{
+        if data[currentIndex].previewUrl == nil { return false }
+        return true
+    }
+    
     private func prepareSong(){
-        if player?.rate == 0 {
-            player!.play()
-            view?.playPauseButton.setImage(UIImage(named: "Pause.png"), for: .normal)
+        if isSessionAvailable(){
+            if player?.rate == 0 {
+                player!.play()
+                view?.playPauseButton.setImage(UIImage(named: "Pause.png"), for: .normal)
+            } else {
+                player!.pause()
+                view?.playPauseButton.setImage(UIImage(named: "Play.png"), for: .normal)
+            }
         } else {
-            player!.pause()
-            view?.playPauseButton.setImage(UIImage(named: "Play.png"), for: .normal)
+            showAlert(title: "song_media_error_title".localized(), message: "song_media_error_message".localized())
         }
+
     }
     
     func stopAll() {
         player?.pause()
     }
     
+    func socialMediaPressed() {
+        if(SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook)) {
+            let controller = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+            controller?.setInitialText("facebook_shared_text".localized())
+            let url = URL(string: data[currentIndex].artworkUrl100!)
+            controller?.add(url)
+            UIApplication.topViewController()?.present(controller!, animated: true, completion: nil)
+        }
+    }
 }
 
 extension SelectorDetailPresenter: SelectorDetailInteractorToPresenterProtocol {

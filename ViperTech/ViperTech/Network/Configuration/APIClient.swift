@@ -20,8 +20,7 @@ class APIClient {
     }
     
     private static var Manager: Alamofire.SessionManager = {
-        let serverTrustPolicies: [String: ServerTrustPolicy] = ["10.105.93.144": .disableEvaluation]
-        
+        let serverTrustPolicies: [String: ServerTrustPolicy] = [:]
         let configuration = URLSessionConfiguration.default
         configuration.httpAdditionalHeaders = Alamofire.SessionManager.defaultHTTPHeaders
         

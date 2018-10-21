@@ -17,6 +17,7 @@ class SelectorDetailViewController: UIViewController {
     @IBOutlet weak var songNameLbl: UILabel!
     @IBOutlet weak var playPauseButton: UIButton!
     @IBOutlet weak var albumImageContainer: UIView!
+    @IBOutlet weak var socialMediaButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +44,10 @@ class SelectorDetailViewController: UIViewController {
     
     @IBAction func onPoreviousButton(_ sender: Any) {
         presenter?.previousSongPressed()
+    }
+    
+    @IBAction func onSocialMedia(_ sender: Any) {
+        presenter?.socialMediaPressed()
     }
     
 }

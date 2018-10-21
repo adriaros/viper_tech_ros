@@ -18,7 +18,7 @@ enum Storyboard : String {
         let optionalViewController = sb.instantiateViewController(withIdentifier: T.storyboardIdentifier)
         
         guard let viewController = optionalViewController as? T  else {
-            fatalError("Couldn’t instantiate view controller with identifier \(T.storyboardIdentifier) ")
+            fatalError(Constants.Errors.Interns.vc_instance + (T.storyboardIdentifier) )
         }
         
         return viewController

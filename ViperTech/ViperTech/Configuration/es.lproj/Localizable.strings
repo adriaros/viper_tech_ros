@@ -11,6 +11,7 @@
 
 //Main
 "mainbutton_title" = "Empezar";
+"main_title_lbl" = "¡Bienvenido!";
 
 //Selector
 "selector_picker.noFilter" = "Sin Filtro";
@@ -21,3 +22,16 @@
 "selector_picker_genreAZ" = "Género A-Z";
 "selector_picker_genreZA" = "Género Z-A";
 "selector_filter_lbl" = "Filtro:";
+"selector_data_loading_fail_title" = "Error de LLamada al Servicio";
+
+//Alert
+"alert_ok_button" = "Entendido";
+"song_media_error_title" = "Error de Reproducción";
+"song_media_error_message" = "Esta canción no está disponible";
+"filter_no_possible" = "Filtro No Disponible";
+"no_filter_time" = "Filtro por duración no está disponible";
+"no_filter_price" = "Filtro por precio no está disponible";
+"no_filter_genre" = "Filtro por género no está disponible";
+
+//SocialMedia
+"facebook_shared_text" = "¡Esta es mi canción!";

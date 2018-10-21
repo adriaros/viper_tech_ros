@@ -13,6 +13,7 @@ class MainViewController: UIViewController {
     var presenter: MainViewToPresenterProtocol?
     
     @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var titleLbl: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
