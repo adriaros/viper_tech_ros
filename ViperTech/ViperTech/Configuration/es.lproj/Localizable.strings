@@ -10,8 +10,9 @@
 "navBar_selector_title" = "Buscador de canciones";
 
 //Main
-"mainbutton_title" = "Empezar";
+"mainbutton_title" = "Buscador de canciones";
 "main_title_lbl" = "¡Bienvenido!";
+"weatherbutton_title" = "Previsión";
 
 //Selector
 "selector_picker.noFilter" = "Sin Filtro";

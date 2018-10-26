@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		50EC8EA13395C178DEB68065 /* Pods_ViperTech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207C2F22A6A3094D257598A1 /* Pods_ViperTech.framework */; };
+		FB00E1E02182FDC20004651B /* WeatherPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB00E1DA2182FDC20004651B /* WeatherPresenter.swift */; };
+		FB00E1E12182FDC20004651B /* WeatherRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB00E1DB2182FDC20004651B /* WeatherRouter.swift */; };
+		FB00E1E22182FDC20004651B /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB00E1DC2182FDC20004651B /* WeatherViewController.swift */; };
+		FB00E1E32182FDC20004651B /* WeatherProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB00E1DD2182FDC20004651B /* WeatherProtocols.swift */; };
+		FB00E1E42182FDC20004651B /* WeatherInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB00E1DE2182FDC20004651B /* WeatherInteractor.swift */; };
+		FB00E1E52182FDC20004651B /* WeatherEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB00E1DF2182FDC20004651B /* WeatherEntities.swift */; };
+		FB00E1E721830E6F0004651B /* WeatherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB00E1E621830E6F0004651B /* WeatherViewController.xib */; };
 		FB84522221786B36001BA9D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB84522121786B36001BA9D7 /* AppDelegate.swift */; };
 		FB84522721786B36001BA9D7 /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB84522521786B36001BA9D7 /* MainViewController.storyboard */; };
 		FB84522A21786B36001BA9D7 /* ViperTech.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB84522821786B36001BA9D7 /* ViperTech.xcdatamodeld */; };
@@ -62,6 +69,13 @@
 		207C2F22A6A3094D257598A1 /* Pods_ViperTech.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViperTech.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		269EB1993C8F02D5C7B3BC62 /* Pods-ViperTech.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperTech.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ViperTech/Pods-ViperTech.debug.xcconfig"; sourceTree = "<group>"; };
 		FA7DDFEB1F80789A671D0748 /* Pods-ViperTech.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperTech.release.xcconfig"; path = "Pods/Target Support Files/Pods-ViperTech/Pods-ViperTech.release.xcconfig"; sourceTree = "<group>"; };
+		FB00E1DA2182FDC20004651B /* WeatherPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherPresenter.swift; sourceTree = "<group>"; };
+		FB00E1DB2182FDC20004651B /* WeatherRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRouter.swift; sourceTree = "<group>"; };
+		FB00E1DC2182FDC20004651B /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		FB00E1DD2182FDC20004651B /* WeatherProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherProtocols.swift; sourceTree = "<group>"; };
+		FB00E1DE2182FDC20004651B /* WeatherInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInteractor.swift; sourceTree = "<group>"; };
+		FB00E1DF2182FDC20004651B /* WeatherEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherEntities.swift; sourceTree = "<group>"; };
+		FB00E1E621830E6F0004651B /* WeatherViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherViewController.xib; sourceTree = "<group>"; };
 		FB84521E21786B36001BA9D7 /* ViperTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB84522121786B36001BA9D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB84522621786B36001BA9D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainViewController.storyboard; sourceTree = "<group>"; };
@@ -145,6 +159,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FB00E1D92182FDA70004651B /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				FB00E1DA2182FDC20004651B /* WeatherPresenter.swift */,
+				FB00E1DB2182FDC20004651B /* WeatherRouter.swift */,
+				FB00E1DC2182FDC20004651B /* WeatherViewController.swift */,
+				FB00E1DD2182FDC20004651B /* WeatherProtocols.swift */,
+				FB00E1DE2182FDC20004651B /* WeatherInteractor.swift */,
+				FB00E1DF2182FDC20004651B /* WeatherEntities.swift */,
+				FB00E1E621830E6F0004651B /* WeatherViewController.xib */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
 		FB84521521786B36001BA9D7 = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +211,7 @@
 		FB84523621786E35001BA9D7 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				FB00E1D92182FDA70004651B /* Weather */,
 				FB97B0252179DD4D0056CA70 /* SelectorDetail */,
 				FB84524B21788F21001BA9D7 /* Selector */,
 				FB84523721786E40001BA9D7 /* Main */,
@@ -410,6 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB84522F21786B38001BA9D7 /* LaunchScreen.storyboard in Resources */,
+				FB00E1E721830E6F0004651B /* WeatherViewController.xib in Resources */,
 				FB97B01D2179DC220056CA70 /* Localizable.strings in Resources */,
 				FB97B05B217A27DD0056CA70 /* SelectorDetailViewController.xib in Resources */,
 				FB8452712179C9CE001BA9D7 /* SelectorTableViewCell.xib in Resources */,
@@ -493,8 +523,11 @@
 				FB97B069217C65970056CA70 /* SelectorSingleton.swift in Sources */,
 				FB97B0422179E41C0056CA70 /* UIViewControllerExtension.swift in Sources */,
 				FB8452652178A416001BA9D7 /* UIApplicationExtension.swift in Sources */,
+				FB00E1E12182FDC20004651B /* WeatherRouter.swift in Sources */,
+				FB00E1E42182FDC20004651B /* WeatherInteractor.swift in Sources */,
 				FB84524221786FA3001BA9D7 /* MainViewController.swift in Sources */,
 				FB8452682179C6A2001BA9D7 /* ConfigParams.swift in Sources */,
+				FB00E1E22182FDC20004651B /* WeatherViewController.swift in Sources */,
 				FB97B04E2179EF210056CA70 /* APIConfigurator.swift in Sources */,
 				FB84526121789EA3001BA9D7 /* NavigationBarExtension.swift in Sources */,
 				FB97B05E217B2AF80056CA70 /* SelectorPickerDelegate.swift in Sources */,
@@ -509,11 +542,14 @@
 				FB84525621788F4C001BA9D7 /* SelectorViewController.swift in Sources */,
 				FB97B04A2179EA410056CA70 /* SelectorListResponse.swift in Sources */,
 				FB84522A21786B36001BA9D7 /* ViperTech.xcdatamodeld in Sources */,
+				FB00E1E32182FDC20004651B /* WeatherProtocols.swift in Sources */,
 				FB8452702179C9CE001BA9D7 /* SelectorTableViewCell.swift in Sources */,
 				FB84524021786FA3001BA9D7 /* MainPresenter.swift in Sources */,
 				FB84524521786FA3001BA9D7 /* MainEntities.swift in Sources */,
+				FB00E1E02182FDC20004651B /* WeatherPresenter.swift in Sources */,
 				FB97B02F2179DD6A0056CA70 /* SelectorDetailProtocols.swift in Sources */,
 				FB97B0232179DC490056CA70 /* StringExtension.swift in Sources */,
+				FB00E1E52182FDC20004651B /* WeatherEntities.swift in Sources */,
 				FB97B0472179E8F40056CA70 /* Constants.swift in Sources */,
 				FB84524421786FA3001BA9D7 /* MainInteractor.swift in Sources */,
 			);
