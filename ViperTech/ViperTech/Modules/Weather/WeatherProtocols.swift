@@ -16,6 +16,7 @@ protocol WeatherInteractorToPresenterProtocol: class{
 
 protocol WeatherPresenterToInteractorProtocol: class{
     var presenter: WeatherInteractorToPresenterProtocol? {get set}
+    func fetchWeather()
 }
 
 protocol WeatherViewToPresenterProtocol: class{

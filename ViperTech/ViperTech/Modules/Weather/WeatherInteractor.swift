@@ -12,4 +12,13 @@ class WeatherInteractor: WeatherPresenterToInteractorProtocol{
     
     var presenter: WeatherInteractorToPresenterProtocol?
 
+    func fetchWeather() {
+        APIClient.getDefaultWeather { (DTO, error) in
+            if error != nil {
+                print("Error: ", error!)
+            } else {
+                print("DTO: ", DTO!)
+            }
+        }
+    }
 }

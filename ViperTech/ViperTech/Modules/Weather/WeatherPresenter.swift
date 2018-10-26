@@ -15,6 +15,7 @@ class WeatherPresenter: WeatherViewToPresenterProtocol {
     var router: WeatherPresenterToRouterProtocol?
     
     func updateView() {
+        interactor?.fetchWeather()
     }
 }
 

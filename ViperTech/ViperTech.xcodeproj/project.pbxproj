@@ -15,6 +15,8 @@
 		FB00E1E42182FDC20004651B /* WeatherInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB00E1DE2182FDC20004651B /* WeatherInteractor.swift */; };
 		FB00E1E52182FDC20004651B /* WeatherEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB00E1DF2182FDC20004651B /* WeatherEntities.swift */; };
 		FB00E1E721830E6F0004651B /* WeatherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB00E1E621830E6F0004651B /* WeatherViewController.xib */; };
+		FB00E1EA218311CA0004651B /* WeatherServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB00E1E9218311CA0004651B /* WeatherServices.swift */; };
+		FB00E1EC218316E00004651B /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB00E1EB218316E00004651B /* WeatherResponse.swift */; };
 		FB84522221786B36001BA9D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB84522121786B36001BA9D7 /* AppDelegate.swift */; };
 		FB84522721786B36001BA9D7 /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB84522521786B36001BA9D7 /* MainViewController.storyboard */; };
 		FB84522A21786B36001BA9D7 /* ViperTech.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB84522821786B36001BA9D7 /* ViperTech.xcdatamodeld */; };
@@ -76,6 +78,8 @@
 		FB00E1DE2182FDC20004651B /* WeatherInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInteractor.swift; sourceTree = "<group>"; };
 		FB00E1DF2182FDC20004651B /* WeatherEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherEntities.swift; sourceTree = "<group>"; };
 		FB00E1E621830E6F0004651B /* WeatherViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherViewController.xib; sourceTree = "<group>"; };
+		FB00E1E9218311CA0004651B /* WeatherServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherServices.swift; sourceTree = "<group>"; };
+		FB00E1EB218316E00004651B /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
 		FB84521E21786B36001BA9D7 /* ViperTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB84522121786B36001BA9D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB84522621786B36001BA9D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainViewController.storyboard; sourceTree = "<group>"; };
@@ -169,6 +173,14 @@
 				FB00E1DE2182FDC20004651B /* WeatherInteractor.swift */,
 				FB00E1DF2182FDC20004651B /* WeatherEntities.swift */,
 				FB00E1E621830E6F0004651B /* WeatherViewController.xib */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		FB00E1E8218311A00004651B /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				FB00E1E9218311CA0004651B /* WeatherServices.swift */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -346,6 +358,7 @@
 			isa = PBXGroup;
 			children = (
 				FB97B0492179EA410056CA70 /* SelectorListResponse.swift */,
+				FB00E1EB218316E00004651B /* WeatherResponse.swift */,
 			);
 			path = ResponseEntity;
 			sourceTree = "<group>";
@@ -362,6 +375,7 @@
 		FB97B063217C65680056CA70 /* ServiceCall */ = {
 			isa = PBXGroup;
 			children = (
+				FB00E1E8218311A00004651B /* Weather */,
 				FB97B064217C65750056CA70 /* Selector */,
 			);
 			path = ServiceCall;
@@ -541,6 +555,7 @@
 				FB84525821788F4C001BA9D7 /* SelectorInteractor.swift in Sources */,
 				FB84525621788F4C001BA9D7 /* SelectorViewController.swift in Sources */,
 				FB97B04A2179EA410056CA70 /* SelectorListResponse.swift in Sources */,
+				FB00E1EA218311CA0004651B /* WeatherServices.swift in Sources */,
 				FB84522A21786B36001BA9D7 /* ViperTech.xcdatamodeld in Sources */,
 				FB00E1E32182FDC20004651B /* WeatherProtocols.swift in Sources */,
 				FB8452702179C9CE001BA9D7 /* SelectorTableViewCell.swift in Sources */,
@@ -549,6 +564,7 @@
 				FB00E1E02182FDC20004651B /* WeatherPresenter.swift in Sources */,
 				FB97B02F2179DD6A0056CA70 /* SelectorDetailProtocols.swift in Sources */,
 				FB97B0232179DC490056CA70 /* StringExtension.swift in Sources */,
+				FB00E1EC218316E00004651B /* WeatherResponse.swift in Sources */,
 				FB00E1E52182FDC20004651B /* WeatherEntities.swift in Sources */,
 				FB97B0472179E8F40056CA70 /* Constants.swift in Sources */,
 				FB84524421786FA3001BA9D7 /* MainInteractor.swift in Sources */,

@@ -20,7 +20,9 @@ class APIClient {
     }
     
     private static var Manager: Alamofire.SessionManager = {
-        let serverTrustPolicies: [String: ServerTrustPolicy] = [:]
+        var serverTrustPolicies: [String: ServerTrustPolicy] = [:]
+        serverTrustPolicies = ["opendata.aemet.es": .disableEvaluation]
+        
         let configuration = URLSessionConfiguration.default
         configuration.httpAdditionalHeaders = Alamofire.SessionManager.defaultHTTPHeaders
         
@@ -34,14 +36,16 @@ class APIClient {
         
         let manager = Manager
         
-        manager.request(serviceRouter).responseJSON { (response) in
+        manager.request(serviceRouter).responseString { (response) in
             
             switch(response.result){
                 
             case .success:
                 do{
                     let jsonDecoder = JSONDecoder()
-                    let dtoObject = try jsonDecoder.decode(dto.self, from: response.data!)
+                    guard let secureResponse = response.result.value?.data(using: .utf8) else { return }
+                    
+                    let dtoObject = try jsonDecoder.decode(dto.self, from: secureResponse)
                     completion(Alamofire.Result.success(dtoObject))
                 }catch _{
                     completion(Alamofire.Result.failure(ApiError.jsonConversion))
