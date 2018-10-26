@@ -17,6 +17,7 @@
 		FB00E1E721830E6F0004651B /* WeatherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB00E1E621830E6F0004651B /* WeatherViewController.xib */; };
 		FB00E1EA218311CA0004651B /* WeatherServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB00E1E9218311CA0004651B /* WeatherServices.swift */; };
 		FB00E1EC218316E00004651B /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB00E1EB218316E00004651B /* WeatherResponse.swift */; };
+		FB00E1EE218328050004651B /* DynamicVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB00E1ED218328050004651B /* DynamicVariables.swift */; };
 		FB84522221786B36001BA9D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB84522121786B36001BA9D7 /* AppDelegate.swift */; };
 		FB84522721786B36001BA9D7 /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB84522521786B36001BA9D7 /* MainViewController.storyboard */; };
 		FB84522A21786B36001BA9D7 /* ViperTech.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB84522821786B36001BA9D7 /* ViperTech.xcdatamodeld */; };
@@ -80,6 +81,7 @@
 		FB00E1E621830E6F0004651B /* WeatherViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherViewController.xib; sourceTree = "<group>"; };
 		FB00E1E9218311CA0004651B /* WeatherServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherServices.swift; sourceTree = "<group>"; };
 		FB00E1EB218316E00004651B /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
+		FB00E1ED218328050004651B /* DynamicVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicVariables.swift; sourceTree = "<group>"; };
 		FB84521E21786B36001BA9D7 /* ViperTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB84522121786B36001BA9D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB84522621786B36001BA9D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainViewController.storyboard; sourceTree = "<group>"; };
@@ -350,6 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				FB97B0462179E8F40056CA70 /* Constants.swift */,
+				FB00E1ED218328050004651B /* DynamicVariables.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -528,6 +531,7 @@
 				FB97B0312179DD6A0056CA70 /* SelectorDetailEntities.swift in Sources */,
 				FB97B02C2179DD6A0056CA70 /* SelectorDetailPresenter.swift in Sources */,
 				FB97B04C2179EF120056CA70 /* APIRouter.swift in Sources */,
+				FB00E1EE218328050004651B /* DynamicVariables.swift in Sources */,
 				FB97B057217A0B6F0056CA70 /* TimeTervalExtension.swift in Sources */,
 				FB97B0502179EF2C0056CA70 /* APIClient.swift in Sources */,
 				FB84524321786FA3001BA9D7 /* MainProtocols.swift in Sources */,

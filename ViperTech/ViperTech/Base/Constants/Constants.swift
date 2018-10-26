@@ -14,7 +14,6 @@ struct Constants {
         struct Url {
             static let base_url = "https://itunes.apple.com/search?term="
             static let default_search = "michael+jackson"
-            static var item_search = ""
             static let weather_url = "https://opendata.aemet.es/opendata/api/prediccion/especifica/municipio/horaria/08019/?api_key="
         }
         struct Service {

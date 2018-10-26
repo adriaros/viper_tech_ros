@@ -14,6 +14,7 @@ enum APIRouter : APIConfiguration {
     case getDefaultList()
     case getSearchList()
     case getWeather()
+    case getDetailWeather()
     
     //HTTPMethod
     var method: HTTPMethod {
@@ -24,6 +25,8 @@ enum APIRouter : APIConfiguration {
             return .get
         case .getWeather():
             return .get
+        case .getDetailWeather():
+            return .get
         }
     }
     
@@ -33,9 +36,11 @@ enum APIRouter : APIConfiguration {
         case .getDefaultList:
             return Constants.Networking.Url.base_url + Constants.Networking.Url.default_search
         case .getSearchList():
-            return Constants.Networking.Url.base_url + Constants.Networking.Url.item_search
+            return Constants.Networking.Url.base_url + DynamicVariables.Networking.Url.item_search
         case .getWeather():
             return Constants.Networking.Url.weather_url + Constants.Networking.Key.api_key
+        case .getDetailWeather():
+            return DynamicVariables.Networking.Url.weather_detail
         }
     }
     
@@ -47,6 +52,8 @@ enum APIRouter : APIConfiguration {
         case .getSearchList():
             return nil
         case .getWeather():
+            return nil
+        case .getDetailWeather():
             return nil
         }
     }
@@ -64,6 +71,9 @@ enum APIRouter : APIConfiguration {
             let url = try path.asURL()
             urlRequest = URLRequest(url: url)
         case .getWeather():
+            let url = try path.asURL()
+            urlRequest = URLRequest(url: url)
+        case .getDetailWeather():
             let url = try path.asURL()
             urlRequest = URLRequest(url: url)
         }
@@ -86,7 +96,6 @@ enum APIRouter : APIConfiguration {
         //timeout
         urlRequest.timeoutInterval = 5
         
-        print(urlRequest)
         return urlRequest
     }
 }

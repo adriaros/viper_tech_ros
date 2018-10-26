@@ -11,7 +11,18 @@ import Foundation
 extension APIClient {
 
     static func getDefaultWeather(completion: @escaping (WeatherResponse?,Error?)->Void){
-        performRequest(serviceRouter: APIRouter.getWeather(), decoder: JSONDecoder(), dto: WeatherResponse.self) { (response) in
+        performRequest(type: .string, serviceRouter: APIRouter.getWeather(), decoder: JSONDecoder(), dto: WeatherResponse.self) { (response) in
+            switch response {
+            case .failure(let error):
+                completion(nil,error)
+            case .success(let data):
+                completion(data, nil)
+            }
+        }
+    }
+    
+    static func getDetailWeather(completion: @escaping ([WeatherDetailResponse]?,Error?)->Void){
+        performRequest(type: .json, serviceRouter: APIRouter.getDetailWeather(), decoder: JSONDecoder(), dto: [WeatherDetailResponse].self) { (response) in
             switch response {
             case .failure(let error):
                 completion(nil,error)

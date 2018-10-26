@@ -41,7 +41,7 @@ class SelectorInteractor: SelectorPresenterToInteractorProtocol{
     
     func search(withInfo: String) {
         let item = translateSearch(item: withInfo)
-        Constants.Networking.Url.item_search = item
+        DynamicVariables.Networking.Url.item_search = item
         getSpecificList()
     }
     

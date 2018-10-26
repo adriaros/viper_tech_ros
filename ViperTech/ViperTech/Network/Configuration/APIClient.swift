@@ -19,6 +19,11 @@ class APIClient {
         case emptyResults
     }
     
+    enum ResponseType : String {
+        case json
+        case string
+    }
+    
     private static var Manager: Alamofire.SessionManager = {
         var serverTrustPolicies: [String: ServerTrustPolicy] = [:]
         serverTrustPolicies = ["opendata.aemet.es": .disableEvaluation]
@@ -32,29 +37,54 @@ class APIClient {
         return manager
     }()
     
-    static func performRequest<T:Decodable>(serviceRouter:APIRouter, decoder: JSONDecoder,dto: T.Type, completion:@escaping (Alamofire.Result<T>)->Void){
+    static func performRequest<T:Decodable>(type: ResponseType, serviceRouter:APIRouter, decoder: JSONDecoder,dto: T.Type, completion:@escaping (Alamofire.Result<T>)->Void){
         
         let manager = Manager
         
-        manager.request(serviceRouter).responseString { (response) in
+        switch type {
+        case .json:
             
-            switch(response.result){
-                
-            case .success:
-                do{
-                    let jsonDecoder = JSONDecoder()
-                    guard let secureResponse = response.result.value?.data(using: .utf8) else { return }
+            manager.request(serviceRouter).responseJSON { (response) in
+                switch(response.result){
                     
-                    let dtoObject = try jsonDecoder.decode(dto.self, from: secureResponse)
-                    completion(Alamofire.Result.success(dtoObject))
-                }catch _{
-                    completion(Alamofire.Result.failure(ApiError.jsonConversion))
+                case .success:
+                    do{
+                        let jsonDecoder = JSONDecoder()
+                        guard let secureResponse = response.data else { return }
+                        let dtoObject = try jsonDecoder.decode(dto.self, from: secureResponse)
+                        completion(Alamofire.Result.success(dtoObject))
+                    }catch _{
+                        completion(Alamofire.Result.failure(ApiError.jsonConversion))
+                    }
+                    
+                case .failure:
+                    completion(Alamofire.Result.failure(ApiError.failedPostCall))
                 }
+            }
+            
+        case .string:
+            
+            manager.request(serviceRouter).responseString { (response) in
                 
-            case .failure:
-                completion(Alamofire.Result.failure(ApiError.failedPostCall))
+                switch(response.result){
+                    
+                case .success:
+                    do{
+                        let jsonDecoder = JSONDecoder()
+                        guard let secureResponse = response.result.value?.data(using: .utf8) else { return }
+                        let dtoObject = try jsonDecoder.decode(dto.self, from: secureResponse)
+                        completion(Alamofire.Result.success(dtoObject))
+                    }catch _{
+                        completion(Alamofire.Result.failure(ApiError.jsonConversion))
+                    }
+                    
+                case .failure:
+                    completion(Alamofire.Result.failure(ApiError.failedPostCall))
+                }
             }
         }
+
+        
     }
     
 }
