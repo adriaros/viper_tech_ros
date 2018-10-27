@@ -34,8 +34,8 @@ struct Prediccion: Codable {
 
 struct Dia: Codable {
     let estadoCielo: [EstadoCielo]?
-    let precipitacion, probPrecipitacion, probTormenta, nieve: [HumedadRelativa]?
-    let probNieve, temperatura, sensTermica, humedadRelativa: [HumedadRelativa]?
+    let precipitacion, probPrecipitacion, probTormenta, nieve: [SharedInfo]?
+    let probNieve, temperatura, sensTermica, humedadRelativa: [SharedInfo]?
     let vientoAndRachaMax: [VientoAndRachaMax]?
     let fecha, orto, ocaso: String?
 }
@@ -44,7 +44,7 @@ struct EstadoCielo: Codable {
     let value, periodo, descripcion: String?
 }
 
-struct HumedadRelativa: Codable {
+struct SharedInfo: Codable {
     let value, periodo: String?
 }
 

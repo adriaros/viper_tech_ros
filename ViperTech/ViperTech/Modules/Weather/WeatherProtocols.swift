@@ -9,9 +9,12 @@
 import UIKit
 
 protocol WeatherPresenterToViewProtocol: class{
+    var tableView: UITableView! { get set }
 }
 
 protocol WeatherInteractorToPresenterProtocol: class{
+    func fetchedWeatherSuccess(data: [WeatherDetailResponse])
+    func fetchedWeatherFailed(error: String)
 }
 
 protocol WeatherPresenterToInteractorProtocol: class{

@@ -18,6 +18,11 @@
 		FB00E1EA218311CA0004651B /* WeatherServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB00E1E9218311CA0004651B /* WeatherServices.swift */; };
 		FB00E1EC218316E00004651B /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB00E1EB218316E00004651B /* WeatherResponse.swift */; };
 		FB00E1EE218328050004651B /* DynamicVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB00E1ED218328050004651B /* DynamicVariables.swift */; };
+		FB00E1F221846DA00004651B /* WeatherTableDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB00E1F121846DA00004651B /* WeatherTableDelegate.swift */; };
+		FB00E1F421846DAE0004651B /* WeatherTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB00E1F321846DAE0004651B /* WeatherTableDataSource.swift */; };
+		FB00E1F821846E150004651B /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB00E1F621846E150004651B /* WeatherTableViewCell.swift */; };
+		FB00E1F921846E150004651B /* WeatherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB00E1F721846E150004651B /* WeatherTableViewCell.xib */; };
+		FB00E1FB218485510004651B /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB00E1FA218485510004651B /* UIImageExtension.swift */; };
 		FB84522221786B36001BA9D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB84522121786B36001BA9D7 /* AppDelegate.swift */; };
 		FB84522721786B36001BA9D7 /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB84522521786B36001BA9D7 /* MainViewController.storyboard */; };
 		FB84522A21786B36001BA9D7 /* ViperTech.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB84522821786B36001BA9D7 /* ViperTech.xcdatamodeld */; };
@@ -82,6 +87,11 @@
 		FB00E1E9218311CA0004651B /* WeatherServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherServices.swift; sourceTree = "<group>"; };
 		FB00E1EB218316E00004651B /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
 		FB00E1ED218328050004651B /* DynamicVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicVariables.swift; sourceTree = "<group>"; };
+		FB00E1F121846DA00004651B /* WeatherTableDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableDelegate.swift; sourceTree = "<group>"; };
+		FB00E1F321846DAE0004651B /* WeatherTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableDataSource.swift; sourceTree = "<group>"; };
+		FB00E1F621846E150004651B /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
+		FB00E1F721846E150004651B /* WeatherTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherTableViewCell.xib; sourceTree = "<group>"; };
+		FB00E1FA218485510004651B /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		FB84521E21786B36001BA9D7 /* ViperTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB84522121786B36001BA9D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB84522621786B36001BA9D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainViewController.storyboard; sourceTree = "<group>"; };
@@ -168,6 +178,7 @@
 		FB00E1D92182FDA70004651B /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				FB00E1EF21846D760004651B /* Table */,
 				FB00E1DA2182FDC20004651B /* WeatherPresenter.swift */,
 				FB00E1DB2182FDC20004651B /* WeatherRouter.swift */,
 				FB00E1DC2182FDC20004651B /* WeatherViewController.swift */,
@@ -185,6 +196,25 @@
 				FB00E1E9218311CA0004651B /* WeatherServices.swift */,
 			);
 			path = Weather;
+			sourceTree = "<group>";
+		};
+		FB00E1EF21846D760004651B /* Table */ = {
+			isa = PBXGroup;
+			children = (
+				FB00E1F521846DFE0004651B /* Cells */,
+				FB00E1F121846DA00004651B /* WeatherTableDelegate.swift */,
+				FB00E1F321846DAE0004651B /* WeatherTableDataSource.swift */,
+			);
+			path = Table;
+			sourceTree = "<group>";
+		};
+		FB00E1F521846DFE0004651B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FB00E1F621846E150004651B /* WeatherTableViewCell.swift */,
+				FB00E1F721846E150004651B /* WeatherTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		FB84521521786B36001BA9D7 = {
@@ -257,6 +287,7 @@
 				FB97B0222179DC490056CA70 /* StringExtension.swift */,
 				FB97B0412179E41C0056CA70 /* UIViewControllerExtension.swift */,
 				FB97B056217A0B6F0056CA70 /* TimeTervalExtension.swift */,
+				FB00E1FA218485510004651B /* UIImageExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -462,6 +493,7 @@
 				FB8452712179C9CE001BA9D7 /* SelectorTableViewCell.xib in Resources */,
 				FB84522C21786B38001BA9D7 /* Assets.xcassets in Resources */,
 				FB84522721786B36001BA9D7 /* MainViewController.storyboard in Resources */,
+				FB00E1F921846E150004651B /* WeatherTableViewCell.xib in Resources */,
 				FB84526321789FF8001BA9D7 /* SelectorViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -527,16 +559,20 @@
 				FB97B066217C65850056CA70 /* SelectorServices.swift in Sources */,
 				FB84524A21788B7E001BA9D7 /* UIViewExtension.swift in Sources */,
 				FB97B02D2179DD6A0056CA70 /* SelectorDetailRouter.swift in Sources */,
+				FB00E1FB218485510004651B /* UIImageExtension.swift in Sources */,
 				FB84524121786FA3001BA9D7 /* MainRouter.swift in Sources */,
 				FB97B0312179DD6A0056CA70 /* SelectorDetailEntities.swift in Sources */,
 				FB97B02C2179DD6A0056CA70 /* SelectorDetailPresenter.swift in Sources */,
 				FB97B04C2179EF120056CA70 /* APIRouter.swift in Sources */,
 				FB00E1EE218328050004651B /* DynamicVariables.swift in Sources */,
+				FB00E1F421846DAE0004651B /* WeatherTableDataSource.swift in Sources */,
+				FB00E1F221846DA00004651B /* WeatherTableDelegate.swift in Sources */,
 				FB97B057217A0B6F0056CA70 /* TimeTervalExtension.swift in Sources */,
 				FB97B0502179EF2C0056CA70 /* APIClient.swift in Sources */,
 				FB84524321786FA3001BA9D7 /* MainProtocols.swift in Sources */,
 				FB97B060217B2B0B0056CA70 /* SelectorPickerDataSource.swift in Sources */,
 				FB84522221786B36001BA9D7 /* AppDelegate.swift in Sources */,
+				FB00E1F821846E150004651B /* WeatherTableViewCell.swift in Sources */,
 				FB84526C2179C8F7001BA9D7 /* SelectorTableDelegate.swift in Sources */,
 				FB97B069217C65970056CA70 /* SelectorSingleton.swift in Sources */,
 				FB97B0422179E41C0056CA70 /* UIViewControllerExtension.swift in Sources */,

@@ -16,7 +16,7 @@ class WeatherInteractor: WeatherPresenterToInteractorProtocol{
         
         APIClient.getDefaultWeather { (DTO, error) in
             if error != nil {
-                print("Error: ", error!)
+                self.presenter?.fetchedWeatherFailed(error: "Error")
             } else {
                 guard let dto = DTO else { return }
                 self.fetchWeatherDetail(info: dto)
@@ -32,10 +32,10 @@ class WeatherInteractor: WeatherPresenterToInteractorProtocol{
         
         APIClient.getDetailWeather { (DTO, error) in
             if error != nil {
-                print("Error: ", error!)
+                self.presenter?.fetchedWeatherFailed(error: "Error")
             } else {
                 guard let dto = DTO else { return }
-                print(dto)
+                self.presenter?.fetchedWeatherSuccess(data: dto)
             }
         }
         

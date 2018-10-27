@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WeatherViewController" customModule="ViperTech" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="OEz-uJ-S1u" id="ePw-HX-Mgx"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Iab-MN-Nzh"/>
             </connections>
         </placeholder>
@@ -19,7 +20,19 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OEz-uJ-S1u">
+                    <rect key="frame" x="20" y="50" width="335" height="587"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="OEz-uJ-S1u" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="30" id="5G1-Hn-ayx"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="OEz-uJ-S1u" secondAttribute="trailing" constant="20" id="J0P-NL-yKH"/>
+                <constraint firstItem="OEz-uJ-S1u" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="nv3-M7-fY4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="OEz-uJ-S1u" secondAttribute="bottom" constant="30" id="twm-Hj-wWY"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
         </view>
     </objects>
