@@ -13,6 +13,8 @@ enum APIRouter : APIConfiguration {
     
     case getDefaultList()
     case getSearchList()
+    case getWeather()
+    case getDetailWeather()
     
     //HTTPMethod
     var method: HTTPMethod {
@@ -20,6 +22,10 @@ enum APIRouter : APIConfiguration {
         case .getDefaultList:
             return .get
         case .getSearchList():
+            return .get
+        case .getWeather():
+            return .get
+        case .getDetailWeather():
             return .get
         }
     }
@@ -30,7 +36,11 @@ enum APIRouter : APIConfiguration {
         case .getDefaultList:
             return Constants.Networking.Url.base_url + Constants.Networking.Url.default_search
         case .getSearchList():
-            return Constants.Networking.Url.base_url + Constants.Networking.Url.item_search
+            return Constants.Networking.Url.base_url + DynamicVariables.Networking.Url.item_search
+        case .getWeather():
+            return Constants.Networking.Url.weather_url + Constants.Networking.Key.api_key
+        case .getDetailWeather():
+            return DynamicVariables.Networking.Url.weather_detail
         }
     }
     
@@ -40,6 +50,10 @@ enum APIRouter : APIConfiguration {
         case .getDefaultList():
             return nil
         case .getSearchList():
+            return nil
+        case .getWeather():
+            return nil
+        case .getDetailWeather():
             return nil
         }
     }
@@ -56,6 +70,12 @@ enum APIRouter : APIConfiguration {
         case .getSearchList:
             let url = try path.asURL()
             urlRequest = URLRequest(url: url)
+        case .getWeather():
+            let url = try path.asURL()
+            urlRequest = URLRequest(url: url)
+        case .getDetailWeather():
+            let url = try path.asURL()
+            urlRequest = URLRequest(url: url)
         }
         
         // HTTP Method
@@ -63,7 +83,6 @@ enum APIRouter : APIConfiguration {
         
         // Common Headers
         urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.acceptType.rawValue)
-        urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.contentType.rawValue)
         
         // Parameters
         if let parameters = parameters {

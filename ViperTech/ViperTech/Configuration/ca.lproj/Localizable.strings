@@ -10,8 +10,9 @@
 "navBar_selector_title" = "Buscador de cancçons";
 
 //Main
-"mainbutton_title" = "Començar";
+"mainbutton_title" = "Cercador de cançons";
 "main_title_lbl" = "Benvingut!";
+"weatherbutton_title" = "Previsió";
 
 //Selector
 "selector_picker.noFilter" = "Sense Filtre";

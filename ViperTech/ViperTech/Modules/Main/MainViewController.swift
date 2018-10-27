@@ -14,6 +14,7 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var weatherButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,10 @@ class MainViewController: UIViewController {
     
     @IBAction func onStartButton(_ sender: Any) {
         presenter?.startButtonPressed()
+    }
+    
+    @IBAction func onWeatherButton(_ sender: Any) {
+        presenter?.weatherButtonPressed()
     }
     
 }

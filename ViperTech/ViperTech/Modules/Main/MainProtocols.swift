@@ -11,6 +11,7 @@ import UIKit
 protocol MainPresenterToViewProtocol: class{
     var startButton: UIButton! { get set }
     var titleLbl: UILabel! { get set }
+    var weatherButton: UIButton!  { get set }
 }
 
 protocol MainInteractorToPresenterProtocol: class{
@@ -26,9 +27,11 @@ protocol MainViewToPresenterProtocol: class{
     var router: MainPresenterToRouterProtocol? {get set}
     func updateView()
     func startButtonPressed()
+    func weatherButtonPressed()
 }
 
 protocol MainPresenterToRouterProtocol: class{
     static func createModule() -> UIViewController
     func navigateToSelector(origin: UIViewController)
+    func navigateToWeather(origin: UIViewController)
 }

@@ -30,4 +30,8 @@ class MainRouter: MainPresenterToRouterProtocol{
         guard let navigationController = origin.navigationController as? NavigationBar else {return}
         navigationController.setViewControllers([SelectorRouter.createModule()], animated: false)
     }
+    
+    func navigateToWeather(origin: UIViewController) {
+        origin.navigationController?.pushViewController(WeatherRouter.createModule(), animated: true)
+    }
 }

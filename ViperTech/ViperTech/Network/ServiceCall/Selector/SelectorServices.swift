@@ -11,7 +11,7 @@ import UIKit
 extension APIClient {
     
     static func getDefaultList(completion: @escaping (SelectorListResponse?,Error?)->Void){
-        performRequest(serviceRouter: APIRouter.getDefaultList(), decoder: JSONDecoder(), dto: SelectorListResponse.self) { (response) in
+        performRequest(type: .json, serviceRouter: APIRouter.getDefaultList(), decoder: JSONDecoder(), dto: SelectorListResponse.self) { (response) in
             switch response {
             case .failure(let error):
                 completion(nil,error)
@@ -22,7 +22,7 @@ extension APIClient {
     }
     
     static func getSearchList(completion: @escaping (SelectorListResponse?,Error?)->Void){
-        performRequest(serviceRouter: APIRouter.getSearchList(), decoder: JSONDecoder(), dto: SelectorListResponse.self) { (response) in
+        performRequest(type: .json, serviceRouter: APIRouter.getSearchList(), decoder: JSONDecoder(), dto: SelectorListResponse.self) { (response) in
             switch response {
             case .failure(let error):
                 completion(nil,error)
