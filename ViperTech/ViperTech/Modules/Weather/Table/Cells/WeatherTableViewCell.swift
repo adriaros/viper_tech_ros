@@ -69,7 +69,6 @@ class WeatherTableViewCell: UITableViewCell {
     }
     
     private func setSkyImage(desc: String) -> UIImage {
-        print(desc)
         if desc == SkyImage.despejado.rawValue {
             return SkyImage.despejado.image
         } else if desc == SkyImage.poco_nuboso.rawValue {
