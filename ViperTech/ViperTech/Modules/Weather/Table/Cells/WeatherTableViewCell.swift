@@ -28,7 +28,7 @@ class WeatherTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        self.selectionStyle = .none
         cellView.shadow()
     }
 

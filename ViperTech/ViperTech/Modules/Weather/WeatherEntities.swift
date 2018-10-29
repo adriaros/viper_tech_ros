@@ -7,6 +7,23 @@
 //
 
 import UIKit
+import RealmSwift
 
-struct WeatherModel {
+class WeatherRealmModel: Object {
+    let days = List<PredictionRealm>()
+}
+
+class PredictionRealm: Object {
+    @objc dynamic var hour: String? = nil
+    @objc dynamic var sky: String? = nil
+    @objc dynamic var temperature: String? = nil
+    @objc dynamic var humidity: String? = nil
+}
+
+extension WeatherRealmModel {
+    func writeToRealm() {
+        try! realm?.write {
+            realm?.add(self)
+        }
+    }
 }

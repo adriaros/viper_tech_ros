@@ -34,8 +34,9 @@ final class WeatherTableDataSource: NSObject, UITableViewDataSource {
         
         guard let humidity = data?[0].humedadRelativa else { return UITableViewCell() }
         cell.displayHumidity(info: humidity[indexPath.row])
-        //cell.contentView.backgroundColor = UIColor.clear
-        //cell.backgroundColor = UIColor.clear
+        
+        cell.contentView.backgroundColor = UIColor.clear
+        cell.backgroundColor = UIColor.clear
         return cell
     }
     
