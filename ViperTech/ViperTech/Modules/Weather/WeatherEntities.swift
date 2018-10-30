@@ -10,13 +10,21 @@ import UIKit
 import RealmSwift
 
 class WeatherRealmModel: Object {
-    let days = List<PredictionRealm>()
+    let days = List<DaysRealm>()
+    let temperatures = List<TemperaturesRealm>()
+    let humidities = List<HumiditiesRealm>()
 }
 
-class PredictionRealm: Object {
+class DaysRealm: Object {
     @objc dynamic var hour: String? = nil
     @objc dynamic var sky: String? = nil
+}
+
+class TemperaturesRealm: Object {
     @objc dynamic var temperature: String? = nil
+}
+
+class HumiditiesRealm: Object {
     @objc dynamic var humidity: String? = nil
 }
 
