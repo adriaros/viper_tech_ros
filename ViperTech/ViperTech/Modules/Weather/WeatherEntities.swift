@@ -21,17 +21,22 @@ class DaysRealm: Object {
 }
 
 class TemperaturesRealm: Object {
+    @objc dynamic var hour: String? = nil
     @objc dynamic var temperature: String? = nil
 }
 
 class HumiditiesRealm: Object {
+    @objc dynamic var hour: String? = nil
     @objc dynamic var humidity: String? = nil
 }
 
 extension WeatherRealmModel {
+    
     func writeToRealm() {
-        try! realm?.write {
-            realm?.add(self)
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(self)
         }
     }
+    
 }

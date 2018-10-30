@@ -59,20 +59,19 @@ class WeatherInteractor: WeatherPresenterToInteractorProtocol{
         
         for temperature in temperatures {
             let prediction = TemperaturesRealm()
+            prediction.hour = temperature.periodo
             prediction.temperature = temperature.value
             realm.temperatures.append(prediction)
         }
         
         for humidity in humidities {
             let prediction = HumiditiesRealm()
+            prediction.hour = humidity.periodo
             prediction.humidity = humidity.value
             realm.humidities.append(prediction)
         }
         
         realm.writeToRealm()
-//        print("Days: ", realm.days)
-//        print("Temp: ", realm.temperatures)
-//        print("Hum: ", realm.humidities)
 
     }
 }
