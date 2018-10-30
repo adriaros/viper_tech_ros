@@ -23,6 +23,7 @@
 		FB00E1F821846E150004651B /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB00E1F621846E150004651B /* WeatherTableViewCell.swift */; };
 		FB00E1F921846E150004651B /* WeatherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB00E1F721846E150004651B /* WeatherTableViewCell.xib */; };
 		FB00E1FB218485510004651B /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB00E1FA218485510004651B /* UIImageExtension.swift */; };
+		FB1F91E121886CF1008DE017 /* RealmExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1F91E021886CF1008DE017 /* RealmExtension.swift */; };
 		FB84522221786B36001BA9D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB84522121786B36001BA9D7 /* AppDelegate.swift */; };
 		FB84522721786B36001BA9D7 /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB84522521786B36001BA9D7 /* MainViewController.storyboard */; };
 		FB84522A21786B36001BA9D7 /* ViperTech.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB84522821786B36001BA9D7 /* ViperTech.xcdatamodeld */; };
@@ -92,6 +93,7 @@
 		FB00E1F621846E150004651B /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
 		FB00E1F721846E150004651B /* WeatherTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherTableViewCell.xib; sourceTree = "<group>"; };
 		FB00E1FA218485510004651B /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		FB1F91E021886CF1008DE017 /* RealmExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmExtension.swift; sourceTree = "<group>"; };
 		FB84521E21786B36001BA9D7 /* ViperTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB84522121786B36001BA9D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB84522621786B36001BA9D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainViewController.storyboard; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 				FB97B0412179E41C0056CA70 /* UIViewControllerExtension.swift */,
 				FB97B056217A0B6F0056CA70 /* TimeTervalExtension.swift */,
 				FB00E1FA218485510004651B /* UIImageExtension.swift */,
+				FB1F91E021886CF1008DE017 /* RealmExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 				FB84525521788F4C001BA9D7 /* SelectorRouter.swift in Sources */,
 				FB97B066217C65850056CA70 /* SelectorServices.swift in Sources */,
 				FB84524A21788B7E001BA9D7 /* UIViewExtension.swift in Sources */,
+				FB1F91E121886CF1008DE017 /* RealmExtension.swift in Sources */,
 				FB97B02D2179DD6A0056CA70 /* SelectorDetailRouter.swift in Sources */,
 				FB00E1FB218485510004651B /* UIImageExtension.swift in Sources */,
 				FB84524121786FA3001BA9D7 /* MainRouter.swift in Sources */,

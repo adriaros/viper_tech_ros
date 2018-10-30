@@ -13,7 +13,7 @@ protocol WeatherPresenterToViewProtocol: class{
 }
 
 protocol WeatherInteractorToPresenterProtocol: class{
-    func fetchedWeatherSuccess(data: [WeatherDetailResponse])
+    func fetchedWeatherSuccess()
     func fetchedWeatherFailed(error: String)
 }
 

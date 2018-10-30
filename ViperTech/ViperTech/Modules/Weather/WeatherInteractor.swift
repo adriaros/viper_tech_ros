@@ -37,7 +37,7 @@ class WeatherInteractor: WeatherPresenterToInteractorProtocol{
             } else {
                 guard let dto = DTO else { return }
                 self.storeInformation(info: dto)
-                self.presenter?.fetchedWeatherSuccess(data: dto)
+                self.presenter?.fetchedWeatherSuccess()
             }
         }
         

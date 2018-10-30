@@ -29,14 +29,3 @@ class HumiditiesRealm: Object {
     @objc dynamic var hour: String? = nil
     @objc dynamic var humidity: String? = nil
 }
-
-extension WeatherRealmModel {
-    
-    func writeToRealm() {
-        let realm = try! Realm()
-        try! realm.write {
-            realm.add(self)
-        }
-    }
-    
-}

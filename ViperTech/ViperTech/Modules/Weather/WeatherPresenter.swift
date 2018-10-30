@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class WeatherPresenter: WeatherViewToPresenterProtocol {
     
@@ -39,10 +40,7 @@ class WeatherPresenter: WeatherViewToPresenterProtocol {
 
 extension WeatherPresenter: WeatherInteractorToPresenterProtocol {
     
-    func fetchedWeatherSuccess(data: [WeatherDetailResponse]) {
-        guard let prediction = data[0].prediccion?.dia else { return }
-        tableDataSource = WeatherTableDataSource(data: prediction)
-        view?.tableView.dataSource = tableDataSource
+    func fetchedWeatherSuccess() {
         view?.tableView.reloadData()
     }
     

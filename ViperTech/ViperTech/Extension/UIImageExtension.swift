@@ -23,7 +23,9 @@ extension UIImage {
         case rain = "rain"
         case snow = "snow"
         case sun = "sun"
+        case moon = "moon"
+        case moon_cloudy = "moon_cloudy"
         
-        static let values = [cloudy, electric, fog, hail, partially_cloudy, rain, snow, sun]
+        static let values = [cloudy, electric, fog, hail, partially_cloudy, rain, snow, sun, moon, moon_cloudy]
     }
 }

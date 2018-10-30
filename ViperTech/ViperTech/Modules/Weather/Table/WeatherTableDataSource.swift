@@ -7,33 +7,22 @@
 //
 
 import UIKit
+import RealmSwift
 
 final class WeatherTableDataSource: NSObject, UITableViewDataSource {
     
-    var data: [Dia]?
-    
-    convenience init(data: [Dia]) {
-        self.init()
-        self.data = data
-    }
+    let realm = try! Realm().objects(WeatherRealmModel.self)
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let hours = data?[0].estadoCielo?.count else { return 0 }
-        return hours
+        return realm[0].days.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: WeatherTableViewCell.cellType, for: indexPath) as? WeatherTableViewCell else {return UITableViewCell()}
         
-        guard let skyInfo = data?[0].estadoCielo else { return UITableViewCell() }
-        //cell.displayBackground(info: skyInfo[indexPath.row])
-        cell.displaySkyInfo(info: skyInfo[indexPath.row])
-        
-        guard let temperature = data?[0].temperatura else { return UITableViewCell() }
-        cell.displayTemperature(info: temperature[indexPath.row])
-        
-        guard let humidity = data?[0].humedadRelativa else { return UITableViewCell() }
-        cell.displayHumidity(info: humidity[indexPath.row])
+        cell.displaySkyInfo(info: realm[0].days[indexPath.row])
+        cell.displayTemperature(info: realm[0].temperatures[indexPath.row])
+        cell.displayHumidity(info: realm[0].humidities[indexPath.row])
         
         cell.contentView.backgroundColor = UIColor.clear
         cell.backgroundColor = UIColor.clear

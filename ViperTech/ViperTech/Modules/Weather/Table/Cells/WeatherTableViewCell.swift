@@ -50,29 +50,30 @@ class WeatherTableViewCell: UITableViewCell {
         else { imageView?.image = UIImage(named: "day_background.jpg") }
     }
     
-    func displaySkyInfo(info: EstadoCielo){
-        guard let hour = info.periodo else { hourLbl.text = "-"; return }
+    func displaySkyInfo(info: DaysRealm){
+        guard let hour = info.hour else { hourLbl.text = "-"; return }
         hourLbl.text = hour
-        guard let sky = info.descripcion else { skyLbl.text = "-"; return }
+        guard let sky = info.sky else { skyLbl.text = "-"; return }
         skyLbl.text = sky
-        skyImage.image = setSkyImage(desc: sky)
+        guard let h = Int(hour) else { return }
+        skyImage.image = setSkyImage(desc: sky, h: h)
     }
     
-    func displayTemperature(info: SharedInfo){
-        guard let temp = info.value else { tempLbl.text = "-"; return }
+    func displayTemperature(info: TemperaturesRealm){
+        guard let temp = info.temperature else { tempLbl.text = "-"; return }
         tempLbl.text = temp + "ºC"
     }
     
-    func displayHumidity(info: SharedInfo){
-        guard let hum = info.value else { tempLbl.text = "-"; return }
+    func displayHumidity(info: HumiditiesRealm){
+        guard let hum = info.humidity else { tempLbl.text = "-"; return }
         humLbl.text = hum + "%"
     }
     
-    private func setSkyImage(desc: String) -> UIImage {
+    private func setSkyImage(desc: String, h: Int) -> UIImage {
         if desc == SkyImage.despejado.rawValue {
-            return SkyImage.despejado.image
+            return h >= 20 || h <= 7 ? SkyImage.noche.image : SkyImage.despejado.image
         } else if desc == SkyImage.poco_nuboso.rawValue {
-            return SkyImage.poco_nuboso.image
+            return h >= 20 || h <= 7 ? SkyImage.noche_nubosa.image : SkyImage.poco_nuboso.image
         } else if desc == SkyImage.intervalos_nubosos.rawValue {
             return SkyImage.intervalos_nubosos.image
         } else if desc == SkyImage.nuboso.rawValue {
