@@ -21,7 +21,10 @@ class WeatherPresenter: WeatherViewToPresenterProtocol {
     
     private var tableDataSource: WeatherTableDataSource?
     
+    let vc = UIApplication.topViewController()
+    
     func updateView() {
+        vc?.showLoader()
         configTable()
         interactor?.fetchWeather()
     }
@@ -32,19 +35,21 @@ class WeatherPresenter: WeatherViewToPresenterProtocol {
         view?.tableView.bounces = false
         view?.tableView.tableFooterView = UIView()
         view?.tableView.backgroundColor = UIColor.clear
-        view?.tableView.delegate = tableDelegate
-        tableDataSource = WeatherTableDataSource()
-        view?.tableView.dataSource = tableDataSource
     }
 }
 
 extension WeatherPresenter: WeatherInteractorToPresenterProtocol {
     
     func fetchedWeatherSuccess() {
+        view?.tableView.delegate = tableDelegate
+        tableDataSource = WeatherTableDataSource()
+        view?.tableView.dataSource = tableDataSource
         view?.tableView.reloadData()
+        vc?.hideLoader()
     }
     
-    func fetchedWeatherFailed(error: String) {
-        
+    func fetchedWeatherFailed(error: Error) {
+        showAlert(title: "selector_data_loading_fail_title".localized(), message: error.localizedDescription)
+        vc?.hideLoader()
     }
 }
