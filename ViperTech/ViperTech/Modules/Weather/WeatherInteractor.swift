@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class WeatherInteractor: WeatherPresenterToInteractorProtocol{
     
@@ -16,7 +17,7 @@ class WeatherInteractor: WeatherPresenterToInteractorProtocol{
         
         APIClient.getDefaultWeather { (DTO, error) in
             if error != nil {
-                self.presenter?.fetchedWeatherFailed(error: "Error")
+                self.presenter?.fetchedWeatherFailed(error: error!)
             } else {
                 guard let dto = DTO else { return }
                 self.fetchWeatherDetail(info: dto)
@@ -32,12 +33,45 @@ class WeatherInteractor: WeatherPresenterToInteractorProtocol{
         
         APIClient.getDetailWeather { (DTO, error) in
             if error != nil {
-                self.presenter?.fetchedWeatherFailed(error: "Error")
+                self.presenter?.fetchedWeatherFailed(error: error!)
             } else {
                 guard let dto = DTO else { return }
-                self.presenter?.fetchedWeatherSuccess(data: dto)
+                self.storeInformation(info: dto)
+                self.presenter?.fetchedWeatherSuccess()
             }
         }
         
+    }
+    
+    private func storeInformation(info: [WeatherDetailResponse]){
+        let realm = WeatherRealmModel()
+
+        guard let values = info[0].prediccion?.dia?[0].estadoCielo! else { return }
+        guard let temperatures = info[0].prediccion?.dia?[0].temperatura! else { return }
+        guard let humidities = info[0].prediccion?.dia?[0].humedadRelativa! else { return }
+        
+        for value in values {
+            let prediction = DaysRealm()
+            prediction.hour = value.periodo
+            prediction.sky = value.descripcion
+            realm.days.append(prediction)
+        }
+        
+        for temperature in temperatures {
+            let prediction = TemperaturesRealm()
+            prediction.hour = temperature.periodo
+            prediction.temperature = temperature.value
+            realm.temperatures.append(prediction)
+        }
+        
+        for humidity in humidities {
+            let prediction = HumiditiesRealm()
+            prediction.hour = humidity.periodo
+            prediction.humidity = humidity.value
+            realm.humidities.append(prediction)
+        }
+        
+        realm.writeToRealm()
+
     }
 }

@@ -49,10 +49,14 @@ enum SkyImage: String {
     case bruma = "Bruma"
     case niebla = "Niebla"
     case calima = "Calima"
+    case noche = "Noche"
+    case noche_nubosa = "Noche nubosa"
     
     var image: UIImage {
         switch self {
         case .despejado: return UIImage(assetId: .sun)!
+        case .noche: return UIImage(assetId: .moon)!
+        case .noche_nubosa: return UIImage(assetId: .moon_cloudy)!
         case .poco_nuboso: return UIImage(assetId: .partially_cloudy)!
         case .intervalos_nubosos: return UIImage(assetId: .partially_cloudy)!
         case .nuboso: return UIImage(assetId: .cloudy)!

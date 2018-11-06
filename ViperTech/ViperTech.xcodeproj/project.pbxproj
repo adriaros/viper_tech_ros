@@ -23,6 +23,8 @@
 		FB00E1F821846E150004651B /* WeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB00E1F621846E150004651B /* WeatherTableViewCell.swift */; };
 		FB00E1F921846E150004651B /* WeatherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB00E1F721846E150004651B /* WeatherTableViewCell.xib */; };
 		FB00E1FB218485510004651B /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB00E1FA218485510004651B /* UIImageExtension.swift */; };
+		FB1F91E121886CF1008DE017 /* RealmExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1F91E021886CF1008DE017 /* RealmExtension.swift */; };
+		FB1F91E9218DCBB6008DE017 /* ViperTechTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1F91E8218DCBB6008DE017 /* ViperTechTests.swift */; };
 		FB84522221786B36001BA9D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB84522121786B36001BA9D7 /* AppDelegate.swift */; };
 		FB84522721786B36001BA9D7 /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB84522521786B36001BA9D7 /* MainViewController.storyboard */; };
 		FB84522A21786B36001BA9D7 /* ViperTech.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB84522821786B36001BA9D7 /* ViperTech.xcdatamodeld */; };
@@ -73,6 +75,16 @@
 		FB97B06C217D10420056CA70 /* AlertUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB97B06B217D10420056CA70 /* AlertUtils.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		FB1F91EB218DCBB6008DE017 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB84521621786B36001BA9D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB84521D21786B36001BA9D7;
+			remoteInfo = ViperTech;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		207C2F22A6A3094D257598A1 /* Pods_ViperTech.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViperTech.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		269EB1993C8F02D5C7B3BC62 /* Pods-ViperTech.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViperTech.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ViperTech/Pods-ViperTech.debug.xcconfig"; sourceTree = "<group>"; };
@@ -92,6 +104,10 @@
 		FB00E1F621846E150004651B /* WeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewCell.swift; sourceTree = "<group>"; };
 		FB00E1F721846E150004651B /* WeatherTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherTableViewCell.xib; sourceTree = "<group>"; };
 		FB00E1FA218485510004651B /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		FB1F91E021886CF1008DE017 /* RealmExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmExtension.swift; sourceTree = "<group>"; };
+		FB1F91E6218DCBB6008DE017 /* ViperTechTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViperTechTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB1F91E8218DCBB6008DE017 /* ViperTechTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViperTechTests.swift; sourceTree = "<group>"; };
+		FB1F91EA218DCBB6008DE017 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB84521E21786B36001BA9D7 /* ViperTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViperTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB84522121786B36001BA9D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB84522621786B36001BA9D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainViewController.storyboard; sourceTree = "<group>"; };
@@ -147,6 +163,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		FB1F91E3218DCBB6008DE017 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FB84521B21786B36001BA9D7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -217,10 +240,20 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		FB1F91E7218DCBB6008DE017 /* ViperTechTests */ = {
+			isa = PBXGroup;
+			children = (
+				FB1F91E8218DCBB6008DE017 /* ViperTechTests.swift */,
+				FB1F91EA218DCBB6008DE017 /* Info.plist */,
+			);
+			path = ViperTechTests;
+			sourceTree = "<group>";
+		};
 		FB84521521786B36001BA9D7 = {
 			isa = PBXGroup;
 			children = (
 				FB84522021786B36001BA9D7 /* ViperTech */,
+				FB1F91E7218DCBB6008DE017 /* ViperTechTests */,
 				FB84521F21786B36001BA9D7 /* Products */,
 				115972E0796E0A8CEAE9C9F2 /* Pods */,
 				BBA00E567F3269F71A465544 /* Frameworks */,
@@ -231,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				FB84521E21786B36001BA9D7 /* ViperTech.app */,
+				FB1F91E6218DCBB6008DE017 /* ViperTechTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -288,6 +322,7 @@
 				FB97B0412179E41C0056CA70 /* UIViewControllerExtension.swift */,
 				FB97B056217A0B6F0056CA70 /* TimeTervalExtension.swift */,
 				FB00E1FA218485510004651B /* UIImageExtension.swift */,
+				FB1F91E021886CF1008DE017 /* RealmExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -427,6 +462,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FB1F91E5218DCBB6008DE017 /* ViperTechTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB1F91EF218DCBB6008DE017 /* Build configuration list for PBXNativeTarget "ViperTechTests" */;
+			buildPhases = (
+				FB1F91E2218DCBB6008DE017 /* Sources */,
+				FB1F91E3218DCBB6008DE017 /* Frameworks */,
+				FB1F91E4218DCBB6008DE017 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB1F91EC218DCBB6008DE017 /* PBXTargetDependency */,
+			);
+			name = ViperTechTests;
+			productName = ViperTechTests;
+			productReference = FB1F91E6218DCBB6008DE017 /* ViperTechTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		FB84521D21786B36001BA9D7 /* ViperTech */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FB84523321786B38001BA9D7 /* Build configuration list for PBXNativeTarget "ViperTech" */;
@@ -456,6 +509,10 @@
 				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = adriaros;
 				TargetAttributes = {
+					FB1F91E5218DCBB6008DE017 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = FB84521D21786B36001BA9D7;
+					};
 					FB84521D21786B36001BA9D7 = {
 						CreatedOnToolsVersion = 10.0;
 					};
@@ -477,11 +534,19 @@
 			projectRoot = "";
 			targets = (
 				FB84521D21786B36001BA9D7 /* ViperTech */,
+				FB1F91E5218DCBB6008DE017 /* ViperTechTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FB1F91E4218DCBB6008DE017 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FB84521C21786B36001BA9D7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -511,6 +576,8 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ViperTech/Pods-ViperTech-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -518,6 +585,8 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -550,6 +619,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FB1F91E2218DCBB6008DE017 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB1F91E9218DCBB6008DE017 /* ViperTechTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FB84521A21786B36001BA9D7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -558,6 +635,7 @@
 				FB84525521788F4C001BA9D7 /* SelectorRouter.swift in Sources */,
 				FB97B066217C65850056CA70 /* SelectorServices.swift in Sources */,
 				FB84524A21788B7E001BA9D7 /* UIViewExtension.swift in Sources */,
+				FB1F91E121886CF1008DE017 /* RealmExtension.swift in Sources */,
 				FB97B02D2179DD6A0056CA70 /* SelectorDetailRouter.swift in Sources */,
 				FB00E1FB218485510004651B /* UIImageExtension.swift in Sources */,
 				FB84524121786FA3001BA9D7 /* MainRouter.swift in Sources */,
@@ -613,6 +691,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		FB1F91EC218DCBB6008DE017 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB84521D21786B36001BA9D7 /* ViperTech */;
+			targetProxy = FB1F91EB218DCBB6008DE017 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		FB84522521786B36001BA9D7 /* MainViewController.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -643,6 +729,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		FB1F91ED218DCBB6008DE017 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EQYUZ4SWRS;
+				INFOPLIST_FILE = ViperTechTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = adriaros.ViperTechTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ViperTech.app/ViperTech";
+			};
+			name = Debug;
+		};
+		FB1F91EE218DCBB6008DE017 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EQYUZ4SWRS;
+				INFOPLIST_FILE = ViperTechTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = adriaros.ViperTechTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ViperTech.app/ViperTech";
+			};
+			name = Release;
+		};
 		FB84523121786B38001BA9D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -808,6 +936,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FB1F91EF218DCBB6008DE017 /* Build configuration list for PBXNativeTarget "ViperTechTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB1F91ED218DCBB6008DE017 /* Debug */,
+				FB1F91EE218DCBB6008DE017 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FB84521921786B36001BA9D7 /* Build configuration list for PBXProject "ViperTech" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

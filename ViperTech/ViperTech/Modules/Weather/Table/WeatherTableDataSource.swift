@@ -7,35 +7,28 @@
 //
 
 import UIKit
+import RealmSwift
 
 final class WeatherTableDataSource: NSObject, UITableViewDataSource {
     
-    var data: [Dia]?
+    let realm = try? Realm().objects(WeatherRealmModel.self)
     
-    convenience init(data: [Dia]) {
-        self.init()
-        self.data = data
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let hours = data?[0].estadoCielo?.count else { return 0 }
-        return hours
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {        
+        guard let db = realm?[0].days else { return 0 }
+        return db.count > 0 ? db.count : 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: WeatherTableViewCell.cellType, for: indexPath) as? WeatherTableViewCell else {return UITableViewCell()}
         
-        guard let skyInfo = data?[0].estadoCielo else { return UITableViewCell() }
-        //cell.displayBackground(info: skyInfo[indexPath.row])
-        cell.displaySkyInfo(info: skyInfo[indexPath.row])
+        guard let db = realm else { return UITableViewCell() }
         
-        guard let temperature = data?[0].temperatura else { return UITableViewCell() }
-        cell.displayTemperature(info: temperature[indexPath.row])
+        cell.displaySkyInfo(info: db[0].days[indexPath.row])
+        cell.displayTemperature(info: db[0].temperatures[indexPath.row])
+        cell.displayHumidity(info: db[0].humidities[indexPath.row])
         
-        guard let humidity = data?[0].humedadRelativa else { return UITableViewCell() }
-        cell.displayHumidity(info: humidity[indexPath.row])
-        //cell.contentView.backgroundColor = UIColor.clear
-        //cell.backgroundColor = UIColor.clear
+        cell.contentView.backgroundColor = UIColor.clear
+        cell.backgroundColor = UIColor.clear
         return cell
     }
     
